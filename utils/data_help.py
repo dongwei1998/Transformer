@@ -88,7 +88,7 @@ def preprocess(input_text, target_text):
 
 
 if __name__ == '__main__':
-    os.environ['CUDA_VISIBLE_DEVICES'] = '/gpu:0'
+
     inp, targ = load_data()
 
     input_vocab = '../config/input_vocab.txt'

@@ -1,6 +1,6 @@
 # coding=utf-8
 # =============================================
-# @Time      : 2023-02-15 16:15
+# @Time      : 2023-02-22 10:15
 # @Author    : DongWei1998
 # @FileName  : transformer.py
 # @Software  : PyCharm
@@ -8,330 +8,326 @@
 import os
 
 import numpy as np
-
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' # 只显示 warning 和 Error 等级的信息，不显示具体的信息
-os.environ["CUDA_VISIBLE_DEVICES"] = '0' # 在 GPU0上运行此代码，显存被挤出
-
-
 import tensorflow as tf
-from tensorflow import keras
+from utils import data_help,parameter
 
-
-
-
-class Encoder(keras.layers.Layer):
-    def __init__(self, num_layers, embedding_size, num_heads, feed_input_size,input_vocab_size, max_seq_length, dropout_rate):
-        super(Encoder, self).__init__()
-        self.num_layers = num_layers
-        self.embedding_size = embedding_size
-        # 嵌入词表
-        self.embedding = keras.layers.Embedding(input_vocab_size, embedding_size)
-        # 位置编码
-        self.pos_embedding = positional_encoding(max_seq_length, embedding_size)
-        # 编码器
-        self.encode_layer = [TransformerEncoder(num_heads, feed_input_size, embedding_size, dropout_rate) for _ in range(num_layers)]
-        #  Dropout层
-        self.dropout = keras.layers.Dropout(dropout_rate)
-
-    def call(self, inputs, training, mark):
-
-        # 获取序列长度
-        seq_len = inputs.shape[1]
-        # embedding 嵌入词表
-        word_emb = self.embedding(inputs)
-        word_emb *= tf.math.sqrt(tf.cast(self.embedding_size, tf.float32))
-        emb = word_emb + self.pos_embedding[:,:seq_len,:]
-        x = self.dropout(emb, training=training)
-
-        for i in range(self.num_layers):
-            x = self.encode_layer[i](x, training, mark)
-        return x
-
-# 归一化
-class LayerNormalization(tf.keras.layers.Layer):
-    def __init__(self, epsilon=1e-6, **kwargs):
-        self.eps = epsilon
-        super(LayerNormalization, self).__init__(**kwargs)
-    def build(self, input_shape):
-        self.gamma = self.add_weight(name='gamma', shape=input_shape[-1:],
-                                     initializer=tf.ones_initializer(), trainable=True)
-        self.beta = self.add_weight(name='beta', shape=input_shape[-1:],
-                                    initializer=tf.zeros_initializer(), trainable=True)
-        super(LayerNormalization, self).build(input_shape)
-    def call(self, x):
-        mean = tf.keras.backend.mean(x, axis=-1, keepdims=True)
-        std = tf.keras.backend.std(x, axis=-1, keepdims=True)
-        return self.gamma * (x - mean) / (std + self.eps) + self.beta
-
-    def compute_output_shape(self, input_shape):
-        return input_shape
-
-
-
-# TransformerEncoder
-class TransformerEncoder(keras.layers.Layer):
-    def __init__(self, num_heads, feed_input_size, embedding_size, dropout_rate):
-        super(TransformerEncoder, self).__init__()
-
-        self.mha = MultiHeadAttention(embedding_size, num_heads)
-        self.ffn = point_wise_feed_forward_network(embedding_size, feed_input_size)
-
-        self.layernorm1 = LayerNormalization(epsilon=1e-6)
-        self.layernorm2 = LayerNormalization(epsilon=1e-6)
-
-
-        self.dropout1 = keras.layers.Dropout(dropout_rate)
-        self.dropout2 = keras.layers.Dropout(dropout_rate)
-
-    def call(self, x, training, mask):
-        # 多头注意力网络
-        attn_output, _ = self.mha(x, x, x, mask)  # (batch_size, input_seq_len, d_model)
-        attn_output = self.dropout1(attn_output, training=training)
-        # 残差+归一化
-        out1 = self.layernorm1(x + attn_output)  # (batch_size, input_seq_len, d_model)
-        # 前向网络
-        ffn_output = self.ffn(out1)  # (batch_size, input_seq_len, d_model)
-        ffn_output = self.dropout2(ffn_output, training=training)
-        # 残差+归一化
-        out2 = self.layernorm2(out1 + ffn_output)  # (batch_size, input_seq_len, d_model)
-        return out2
-
-
-
-class Decoder(keras.layers.Layer):
-    def __init__(self, num_layers, embedding_size, num_heads, feed_input_size, target_vocab_size, max_seq_length, drop_rate=0.1):
-        super(Decoder, self).__init__()
-
-        self.embedding_size = embedding_size
-        self.num_layers = num_layers
-
-        self.embedding = keras.layers.Embedding(target_vocab_size, self.embedding_size)
-        self.pos_embedding = positional_encoding(max_seq_length, self.embedding_size)
-
-        self.decoder_layers= [TransformerDecoder(self.embedding_size, num_heads, feed_input_size, drop_rate) for _ in range(self.num_layers)]
-
-        self.dropout = keras.layers.Dropout(drop_rate)
-
-    def call(self, inputs, encoder_out,training,look_ahead_mark, padding_mark):
-
-        seq_len = tf.shape(inputs)[1]
-        attention_weights = {}
-        h = self.embedding(inputs)
-        h *= tf.math.sqrt(tf.cast(self.embedding_size, tf.float32))
-        h += self.pos_embedding[:,:seq_len,:]
-        h = self.dropout(h, training=training)
-        # 叠加解码层
-        for i in range(self.num_layers):
-            h, att_w1, att_w2 = self.decoder_layers[i](h, encoder_out,training, look_ahead_mark,padding_mark)
-            attention_weights['decoder_layer{}_att_w1'.format(i+1)] = att_w1
-            attention_weights['decoder_layer{}_att_w2'.format(i+1)] = att_w2
-        return h, attention_weights
-
-# TransformerDecoder
-class TransformerDecoder(keras.layers.Layer):
-    def __init__(self, embedding_size, num_heads, feed_input_size, dropout_rate):
-        super(TransformerDecoder, self).__init__()
-        self.mha1 = MultiHeadAttention(embedding_size, num_heads)
-        self.mha2 = MultiHeadAttention(embedding_size, num_heads)
-        self.ffn = point_wise_feed_forward_network(embedding_size, feed_input_size)
-
-        self.layernorm1 = keras.layers.LayerNormalization(epsilon=1e-6)
-        self.layernorm2 = keras.layers.LayerNormalization(epsilon=1e-6)
-        self.layernorm3 = keras.layers.LayerNormalization(epsilon=1e-6)
-
-        self.dropout1 = keras.layers.Dropout(dropout_rate)
-        self.dropout2 = keras.layers.Dropout(dropout_rate)
-        self.dropout3 = keras.layers.Dropout(dropout_rate)
-
-    def call(self, inputs, encode_out, training, look_ahead_mask, padding_mask):
-        # masked muti-head attention
-        att1, att_weight1 = self.mha1(inputs, inputs, inputs, look_ahead_mask)
-        att1 = self.dropout1(att1, training=training)
-        out1 = self.layernorm1(inputs + att1)
-        # muti-head attention
-        att2, att_weight2 = self.mha2(encode_out, encode_out, inputs, padding_mask)
-        att2 = self.dropout2(att2, training=training)
-        out2 = self.layernorm2(out1 + att2)
-
-        ffn_out = self.ffn(out2)
-        ffn_out = self.dropout3(ffn_out, training=training)
-        out3 = self.layernorm3(out2 + ffn_out)
-
-        return out3, att_weight1, att_weight2
-
-
-# 点积计算注意力
-def scaled_dot_product_attention(q, k, v, mask):
-    # query key 相乘获取匹配关系
-    matmul_qk = tf.matmul(q, k, transpose_b=True)
-
-    # 使用dk进行缩放
-    dk = tf.cast(tf.shape(k)[-1], tf.float32)
-    scaled_attention_logits = matmul_qk / tf.math.sqrt(dk)
-
-    # 掩码
-    if mask is not None:
-        scaled_attention_logits += (mask * -1e9)
-
-    # 通过softmax获取attention权重
-    attention_weights = tf.nn.softmax(scaled_attention_logits, axis=-1)
-
-    # attention 乘上value
-    output = tf.matmul(attention_weights, v)  # （.., seq_len_v, depth）
-
-    return output, attention_weights
-
-
-def create_look_ahead_mark(size):
-    # 1 - 对角线和取下三角的全部对角线（-1->全部）
-    # 这样就可以构造出每个时刻未预测token的掩码
-    mark = 1 - tf.linalg.band_part(tf.ones((size, size)), -1, 0)
-    return mark  # (seq_len, seq_len)
-
-# 掩码（mask）
-def create_padding_mark(seq):
-    # 获取为0的padding项
-    seq = tf.cast(tf.math.equal(seq, 0), tf.float32)
-    # 扩充维度以便用于attention矩阵
-    return seq[:, np.newaxis, np.newaxis, :]
 
 # 位置编码
-def get_angles(pos, i, embedding_size):
-    # 这里的i等价与上面公式中的2i和2i+1
-    angle_rates = 1 / np.power(10000, (2*(i // 2))/ np.float32(embedding_size))
-    return pos * angle_rates
-def positional_encoding(max_seq_length, embedding_size):
-    angle_rads = get_angles(np.arange(max_seq_length)[:, np.newaxis],
-                           np.arange(embedding_size)[np.newaxis,:],
-                           embedding_size)
-    # 第2i项使用sin
-    sines = np.sin(angle_rads[:, 0::2])
-    # 第2i+1项使用cos
-    cones = np.cos(angle_rads[:, 1::2])
-    pos_encoding = np.concatenate([sines, cones], axis=-1)
-    pos_encoding = pos_encoding[np.newaxis, ...]
+def positional_encoding(length, depth):
+  depth = depth/2
 
-    return tf.cast(pos_encoding, dtype=tf.float32)
+  positions = np.arange(length)[:, np.newaxis]     # (seq, 1)
+  depths = np.arange(depth)[np.newaxis, :]/depth   # (1, depth)
+
+  angle_rates = 1 / (10000**depths)         # (1, depth)
+  angle_rads = positions * angle_rates      # (pos, depth)
+
+  pos_encoding = np.concatenate(
+      [np.sin(angle_rads), np.cos(angle_rads)],
+      axis=-1)
+
+  return tf.cast(pos_encoding, dtype=tf.float32)
+
+# 嵌入词表+位置编码
+class PositionalEmbedding(tf.keras.layers.Layer):
+  def __init__(self, vocab_size, d_model):
+    super().__init__()
+    self.d_model = d_model
+    self.embedding = tf.keras.layers.Embedding(vocab_size, d_model, mask_zero=True)
+    self.pos_encoding = positional_encoding(length=2048, depth=d_model)
+
+  def compute_mask(self, *args, **kwargs):
+    return self.embedding.compute_mask(*args, **kwargs)
+
+  def call(self, x):
+    length = tf.shape(x)[1]
+    x = self.embedding(x)
+    # This factor sets the relative scale of the embedding and positonal_encoding.
+    x *= tf.math.sqrt(tf.cast(self.d_model, tf.float32))
+    x = x + self.pos_encoding[tf.newaxis, :length, :]
+    return x
+
+# 基础的注意力
+class BaseAttention(tf.keras.layers.Layer):
+  def __init__(self, **kwargs):
+    super().__init__()
+    self.mha = tf.keras.layers.MultiHeadAttention(**kwargs)
+    self.layernorm = tf.keras.layers.LayerNormalization()
+    self.add = tf.keras.layers.Add()
+
+
+# 交叉的注意力
+class CrossAttention(BaseAttention):
+  def call(self, x, context):
+    attn_output, attn_scores = self.mha(
+        query=x,
+        key=context,
+        value=context,
+        return_attention_scores=True)
+
+    # Cache the attention scores for plotting later.
+    self.last_attn_scores = attn_scores
+
+    x = self.add([x, attn_output])
+    x = self.layernorm(x)
+
+    return x
+
+# 全局的子注意力 self Attention
+class GlobalSelfAttention(BaseAttention):
+  def call(self, x):
+    attn_output = self.mha(
+        query=x,
+        value=x,
+        key=x)
+    x = self.add([x, attn_output])
+    x = self.layernorm(x)
+    return x
+
+
+# 因果注意力
+class CausalSelfAttention(BaseAttention):
+  def call(self, x):
+    attn_output = self.mha(
+        query=x,
+        value=x,
+        key=x,
+        use_causal_mask = True)
+    x = self.add([x, attn_output])
+    x = self.layernorm(x)
+    return x
+
+
 
 # 前馈网络
-def point_wise_feed_forward_network(embedding_size, feed_input_size):
-    return tf.keras.Sequential([
-        tf.keras.layers.Dense(feed_input_size, activation='relu'),
-        tf.keras.layers.Dense(embedding_size)
+class FeedForward(tf.keras.layers.Layer):
+  def __init__(self, d_model, dff, dropout_rate=0.1):
+    super().__init__()
+    self.seq = tf.keras.Sequential([
+      tf.keras.layers.Dense(dff, activation='relu'),
+      tf.keras.layers.Dense(d_model),
+      tf.keras.layers.Dropout(dropout_rate)
     ])
+    self.add = tf.keras.layers.Add()
+    self.layer_norm = tf.keras.layers.LayerNormalization()
 
-# 构造mutil head attention层
-class MultiHeadAttention(keras.layers.Layer):
-    def __init__(self, embedding_size, num_heads):
-        super(MultiHeadAttention, self).__init__()
-        self.num_heads = num_heads
-        self.embedding_size = embedding_size
-
-        # embedding_size 必须可以正确分为各个头
-        assert embedding_size % num_heads == 0
-        # 分头后的维度
-        self.depth = embedding_size // num_heads
-
-        self.wq = tf.keras.layers.Dense(embedding_size)
-        self.wk = tf.keras.layers.Dense(embedding_size)
-        self.wv = tf.keras.layers.Dense(embedding_size)
-
-        self.dense = tf.keras.layers.Dense(embedding_size)
-
-    def split_heads(self, x, batch_size):
-        # 分头, 将头个数的维度 放到 seq_len 前面
-        x = tf.reshape(x, (batch_size, -1, self.num_heads, self.depth))
-        return tf.transpose(x, perm=[0, 2, 1, 3])
-
-    def call(self, v, k, q, mask):
-        batch_size = tf.shape(q)[0]
-
-        # 分头前的前向网络，获取q、k、v语义
-        q = self.wq(q)  # (batch_size, seq_len, embedding_size)
-        k = self.wk(k)
-        v = self.wv(v)
-
-        # 分头
-        q = self.split_heads(q, batch_size) # (batch_size, num_heads, seq_len_q, depth)
-        k = self.split_heads(k, batch_size)
-        v = self.split_heads(v, batch_size)
-        # scaled_attention.shape == (batch_size, num_heads, seq_len_v, depth)
-        # attention_weights.shape == (batch_size, num_heads, seq_len_q, seq_len_k)
-        # 通过缩放点积注意力层
-        scaled_attention, attention_weights = scaled_dot_product_attention(q, k, v, mask)
-        # 把多头维度后移
-        scaled_attention = tf.transpose(scaled_attention, [0, 2, 1, 3]) # (batch_size, seq_len_v, num_heads, depth)
-        # 合并多头
-        concat_attention = tf.reshape(scaled_attention,(batch_size, -1, self.embedding_size))
-        # 全连接重塑
-        output = self.dense(concat_attention)
-        return output, attention_weights
+  def call(self, x):
+    x = self.add([x, self.seq(x)])
+    x = self.layer_norm(x)
+    return x
 
 
-class Transformer(keras.Model):
-    def __init__(self, num_layers, num_heads, feed_input_size, max_seq_length,input_vocab_size,target_vocab_size,embedding_size, dropout_rate=0.1):
-        super(Transformer, self).__init__()
-        self.encoder = Encoder(num_layers, embedding_size, num_heads, feed_input_size,input_vocab_size, max_seq_length, dropout_rate)
-        self.decoder = Decoder(num_layers, embedding_size, num_heads, feed_input_size,target_vocab_size, max_seq_length, dropout_rate)
-        self.dropout_layer = keras.layers.Dropout(dropout_rate)
+# 编码器层
+class EncoderLayer(tf.keras.layers.Layer):
+  def __init__(self,*, d_model, num_heads, dff, dropout_rate=0.1):
+    super().__init__()
+
+    self.self_attention = GlobalSelfAttention(
+        num_heads=num_heads,
+        key_dim=d_model,
+        dropout=dropout_rate)
+
+    self.ffn = FeedForward(d_model, dff)
+
+  def call(self, x):
+    x = self.self_attention(x)
+    x = self.ffn(x)
+    return x
 
 
-        self.final_layer = keras.layers.Dense(target_vocab_size)
+# 编码器
+class Encoder(tf.keras.layers.Layer):
+  def __init__(self, *, num_layers, d_model, num_heads,
+               dff, vocab_size, dropout_rate=0.1):
+    super().__init__()
+
+    self.d_model = d_model
+    self.num_layers = num_layers
+
+    self.pos_embedding = PositionalEmbedding(
+        vocab_size=vocab_size, d_model=d_model)
+
+    self.enc_layers = [
+        EncoderLayer(d_model=d_model,
+                     num_heads=num_heads,
+                     dff=dff,
+                     dropout_rate=dropout_rate)
+        for _ in range(num_layers)]
+    self.dropout = tf.keras.layers.Dropout(dropout_rate)
+
+  def call(self, x):
+    # `x` is token-IDs shape: (batch, seq_len)
+    x = self.pos_embedding(x)  # Shape `(batch_size, seq_len, d_model)`.
+
+    # Add dropout.
+    x = self.dropout(x)
+
+    for i in range(self.num_layers):
+      x = self.enc_layers[i](x)
+
+    return x  # Shape `(batch_size, seq_len, d_model)`.
+
+
+# 解码器层
+class DecoderLayer(tf.keras.layers.Layer):
+  def __init__(self,
+               *,
+               d_model,
+               num_heads,
+               dff,
+               dropout_rate=0.1):
+    super(DecoderLayer, self).__init__()
+
+    self.causal_self_attention = CausalSelfAttention(
+        num_heads=num_heads,
+        key_dim=d_model,
+        dropout=dropout_rate)
+
+    self.cross_attention = CrossAttention(
+        num_heads=num_heads,
+        key_dim=d_model,
+        dropout=dropout_rate)
+
+    self.ffn = FeedForward(d_model, dff)
+
+  def call(self, x, context):
+    x = self.causal_self_attention(x=x)
+    x = self.cross_attention(x=x, context=context)
+
+    # Cache the last attention scores for plotting later
+    self.last_attn_scores = self.cross_attention.last_attn_scores
+
+    x = self.ffn(x)  # Shape `(batch_size, seq_len, d_model)`.
+    return x
+
+
+# 解码器
+class Decoder(tf.keras.layers.Layer):
+  def __init__(self, *, num_layers, d_model, num_heads, dff, vocab_size,
+               dropout_rate=0.1):
+    super(Decoder, self).__init__()
+
+    self.d_model = d_model
+    self.num_layers = num_layers
+
+    self.pos_embedding = PositionalEmbedding(vocab_size=vocab_size,
+                                             d_model=d_model)
+    self.dropout = tf.keras.layers.Dropout(dropout_rate)
+    self.dec_layers = [
+        DecoderLayer(d_model=d_model, num_heads=num_heads,
+                     dff=dff, dropout_rate=dropout_rate)
+        for _ in range(num_layers)]
+
+    self.last_attn_scores = None
+
+  def call(self, x, context):
+    # `x` is token-IDs shape (batch, target_seq_len)
+    x = self.pos_embedding(x)  # (batch_size, target_seq_len, d_model)
+
+    x = self.dropout(x)
+
+    for i in range(self.num_layers):
+      x  = self.dec_layers[i](x, context)
+
+    self.last_attn_scores = self.dec_layers[-1].last_attn_scores
+
+    # The shape of x is (batch_size, target_seq_len, d_model).
+    return x
+
+
+# Transformer模型
+class Transformer(tf.keras.Model):
+  def __init__(self, *, num_layers, d_model, num_heads, dff,
+               input_vocab_size, target_vocab_size, dropout_rate=0.1):
+    super().__init__()
+    self.encoder = Encoder(num_layers=num_layers, d_model=d_model,
+                           num_heads=num_heads, dff=dff,
+                           vocab_size=input_vocab_size,
+                           dropout_rate=dropout_rate)
+
+    self.decoder = Decoder(num_layers=num_layers, d_model=d_model,
+                           num_heads=num_heads, dff=dff,
+                           vocab_size=target_vocab_size,
+                           dropout_rate=dropout_rate)
+
+    self.final_layer = tf.keras.layers.Dense(target_vocab_size)
+
+  def call(self, inputs):
+    # To use a Keras model with `.fit` you must pass all your inputs in the
+    # first argument.
+    context, x  = inputs
+
+    context = self.encoder(context)  # (batch_size, context_len, d_model)
+
+    x = self.decoder(x, context)  # (batch_size, target_len, d_model)
+
+    # Final linear layer output.
+    logits = self.final_layer(x)  # (batch_size, target_len, target_vocab_size)
+
+    try:
+      # Drop the keras mask, so it doesn't scale the losses/metrics.
+      # b/250038731
+      del logits._keras_mask
+    except AttributeError:
+      pass
+
+    # Return the final output and the attention weights.
+    return logits
 
 
 
-    def call(self, inputs, targets, training, encode_padding_mask, look_ahead_mask, decode_padding_mask):
-        # 编码器
-        encode_out = self.encoder(inputs, training, encode_padding_mask) # (batch_size, inp_seq_len, d_model)
-        # 解码器
-        decode_out, attention_weights = self.decoder(targets, encode_out, training, look_ahead_mask,decode_padding_mask)
-        # 全连接 不做激活 输出的是logits
-        final_output = self.final_layer(decode_out)  # (batch_size, tar_seq_len, target_vocab_size)
-        return final_output, attention_weights
 
 
+if __name__ == '__main__':
+    os.environ["CUDA_VISIBLE_DEVICES"] = '1'
+    # 超参数
+    num_layers = 4
+    d_model = 128
+    dff = 512
+    num_heads = 8
+    dropout_rate = 0.1
+    # 参数加载
+    args = parameter.parser_opt()
+    # 数据加载
+    inp, targ = data_help.load_data()
+    # 数据预处理 序列化工具加载
+    if os.path.exists(args.input_vocab) and os.path.exists(args.target_vocab):
+        input_text_processor = data_help.load_text_processor(args.input_vocab, args.max_seq_length)
+        output_text_processor = data_help.load_text_processor(args.target_vocab, args.max_seq_length)
+    else:
+        input_text_processor = data_help.create_text_processor(args.input_vocab, inp, args.max_seq_length)
+        output_text_processor = data_help.create_text_processor(args.target_vocab, targ, args.max_seq_length)
 
+    # 原数据据打乱 批次化
+    dataset = tf.data.Dataset.from_tensor_slices((inp, targ))
+    dataset = dataset.batch(args.batch_size)
+    # 获取词表大小
+    args.input_vocab_size = input_text_processor.vocabulary_size()
+    args.target_vocab_size = output_text_processor.vocabulary_size()
 
-
-if __name__ == "__main__":
-    os.environ['CUDA_VISIBLE_DEVICES'] = '/gpu:0'
-
+    # 模型构建
     transformer = Transformer(
-        num_layers=6,
-        num_heads=8,
-        input_vocab_size=9500,
-        target_vocab_size=8000,
-        embedding_size=256,
-        dropout_rate=0.1,
-        feed_input_size=1024,
-        max_seq_length=312
-    )
+        num_layers=num_layers,
+        d_model=d_model,
+        num_heads=num_heads,
+        dff=dff,
+        input_vocab_size=args.input_vocab_size,
+        target_vocab_size=args.target_vocab_size,
+        dropout_rate=dropout_rate)
 
 
-    # 1. 定义输入变量
-    temp_input = tf.random.uniform((64, 25))
-    temp_target = tf.random.uniform((64, 6))
+    # 构建预训练的模型
+    for batch, (example_input_batch, example_target_batch) in enumerate(dataset):
+        # 数据转换id
+        input_tokens = input_text_processor(example_input_batch)
+        target_tokens = output_text_processor(example_target_batch)
 
+        # 训练模型
+        output = transformer((input_tokens, target_tokens))
 
-    final_output, _ = transformer(
-        inputs=temp_input,
-        targets=temp_target,
-        training=False,
-        encode_padding_mask=None,
-        look_ahead_mask=None,
-        decode_padding_mask=None
-    )
-    print(final_output.shape)
+        # 模型可视化
+        transformer.summary()
+        print("输入: %s\n" % input_text_processor(example_input_batch))
+        print("输出: %s\n" % output.shape)
 
-    transformer.summary()
-
-
-
-
-
-
-
-
-
-
-
+        break

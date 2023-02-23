@@ -1,0 +1,1943 @@
+2022-09-22 09:35:27|INFO|transformer.py[:77]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128}
+2022-09-22 09:35:27|INFO|transformer.py[:57]|Data loading ./datasets
+2022-09-22 09:35:27|INFO|transformer.py[:59]|create model Transformer !
+2022-09-22 09:36:17|INFO|transformer.py[:77]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128}
+2022-09-22 09:36:17|INFO|transformer.py[:57]|Data loading ./datasets
+2022-09-22 09:36:17|INFO|transformer.py[:59]|create model Transformer !
+2022-09-22 09:36:19|INFO|transformer.py[:62]|Create the model optimizer !
+2022-09-22 09:36:19|INFO|transformer.py[:66]|Start model training !
+2022-09-22 09:36:19|INFO|transformer.py[:37]|Data normalization !
+2022-09-22 09:36:19|INFO|transformer.py[:69]|Start model validation !
+2022-09-22 09:36:19|INFO|transformer.py[:72]|Model persistence ./alphamind
+2022-09-22 09:36:52|INFO|transformer.py[:77]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128}
+2022-09-22 09:36:52|INFO|transformer.py[:57]|Data loading ./datasets
+2022-09-22 09:36:52|INFO|transformer.py[:59]|create model Transformer !
+2022-09-22 09:36:54|INFO|transformer.py[:62]|Create the model optimizer !
+2022-09-22 09:36:54|INFO|transformer.py[:66]|Start model training !
+2022-09-22 09:37:48|INFO|transformer.py[:78]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128}
+2022-09-22 09:37:48|INFO|transformer.py[:58]|Data loading ./datasets
+2022-09-22 09:37:48|INFO|transformer.py[:60]|create model Transformer !
+2022-09-22 09:37:49|INFO|transformer.py[:63]|Create the model optimizer !
+2022-09-22 09:37:49|INFO|transformer.py[:67]|Start model training !
+2022-09-22 09:38:24|INFO|transformer.py[:78]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500}
+2022-09-22 09:38:24|INFO|transformer.py[:58]|Data loading ./datasets
+2022-09-22 09:38:24|INFO|transformer.py[:60]|create model Transformer !
+2022-09-22 09:38:26|INFO|transformer.py[:63]|Create the model optimizer !
+2022-09-22 09:38:26|INFO|transformer.py[:67]|Start model training !
+2022-09-22 09:38:26|INFO|transformer.py[:37]|Data normalization !
+2022-09-22 09:38:26|INFO|transformer.py[:70]|Start model validation !
+2022-09-22 09:38:26|INFO|transformer.py[:73]|Model persistence ./alphamind
+2022-09-22 09:39:23|INFO|transformer.py[:80]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500}
+2022-09-22 09:39:23|INFO|transformer.py[:60]|Data loading ./datasets
+2022-09-22 09:39:23|INFO|transformer.py[:62]|create model Transformer !
+2022-09-22 09:39:24|INFO|transformer.py[:65]|Create the model optimizer !
+2022-09-22 09:39:24|INFO|transformer.py[:69]|Start model training !
+2022-09-22 09:39:24|INFO|transformer.py[:37]|Data normalization !
+2022-09-22 09:39:24|INFO|transformer.py[:42]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 09:39:24|INFO|transformer.py[:72]|Start model validation !
+2022-09-22 09:39:24|INFO|transformer.py[:75]|Model persistence ./alphamind
+2022-09-22 09:43:37|INFO|transformer.py[:93]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500}
+2022-09-22 09:43:37|INFO|transformer.py[:73]|Data loading ./datasets
+2022-09-22 09:43:37|INFO|transformer.py[:75]|create model Transformer !
+2022-09-22 09:43:39|INFO|transformer.py[:78]|Create the model optimizer !
+2022-09-22 09:43:39|INFO|transformer.py[:82]|Start model training !
+2022-09-22 09:43:39|INFO|transformer.py[:49]|Data normalization !
+2022-09-22 09:43:39|INFO|transformer.py[:53]|input_info shep is (None, None, 500)
+2022-09-22 09:43:39|INFO|transformer.py[:54]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 09:43:39|INFO|transformer.py[:55]|positional_info shep is (None, 1, 1, None, 500)
+2022-09-22 09:43:39|INFO|transformer.py[:85]|Start model validation !
+2022-09-22 09:43:39|INFO|transformer.py[:88]|Model persistence ./alphamind
+2022-09-22 09:43:57|INFO|transformer.py[:94]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500}
+2022-09-22 09:43:57|INFO|transformer.py[:74]|Data loading ./datasets
+2022-09-22 09:43:57|INFO|transformer.py[:76]|create model Transformer !
+2022-09-22 09:43:57|INFO|transformer.py[:79]|Create the model optimizer !
+2022-09-22 09:43:57|INFO|transformer.py[:83]|Start model training !
+2022-09-22 09:43:57|INFO|transformer.py[:49]|Data normalization !
+2022-09-22 09:43:57|INFO|transformer.py[:54]|input_info shep is (None, 32, 500)
+2022-09-22 09:43:57|INFO|transformer.py[:55]|embedding_info shep is (None, 32, 500, 128)
+2022-09-22 09:43:57|INFO|transformer.py[:56]|positional_info shep is (None, 1, 1, 32, 500)
+2022-09-22 09:43:57|INFO|transformer.py[:86]|Start model validation !
+2022-09-22 09:43:57|INFO|transformer.py[:89]|Model persistence ./alphamind
+2022-09-22 09:55:05|INFO|transformer.py[:94]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500}
+2022-09-22 09:55:05|INFO|transformer.py[:74]|Data loading ./datasets
+2022-09-22 09:55:05|INFO|transformer.py[:76]|create model Transformer !
+2022-09-22 09:55:07|INFO|transformer.py[:79]|Create the model optimizer !
+2022-09-22 09:55:07|INFO|transformer.py[:83]|Start model training !
+2022-09-22 09:55:07|INFO|transformer.py[:49]|Data normalization !
+2022-09-22 09:55:07|INFO|transformer.py[:54]|input_info shep is (None, None, 500)
+2022-09-22 09:55:07|INFO|transformer.py[:55]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 09:55:07|INFO|transformer.py[:56]|positional_info shep is (None, 1, 1, None, 500)
+2022-09-22 09:55:07|INFO|transformer.py[:86]|Start model validation !
+2022-09-22 09:55:07|INFO|transformer.py[:89]|Model persistence ./alphamind
+2022-09-22 10:49:28|INFO|transformer.py[:129]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500}
+2022-09-22 10:49:28|INFO|transformer.py[:109]|Data loading ./datasets
+2022-09-22 10:49:28|INFO|transformer.py[:111]|create model Transformer !
+2022-09-22 10:50:03|INFO|transformer.py[:133]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500}
+2022-09-22 10:50:03|INFO|transformer.py[:108]|Data loading ./datasets
+2022-09-22 10:50:03|INFO|transformer.py[:110]|create model Transformer !
+2022-09-22 10:50:05|INFO|transformer.py[:118]|Create the model optimizer !
+2022-09-22 10:50:05|INFO|transformer.py[:122]|Start model training !
+2022-09-22 10:50:05|INFO|transformer.py[:71]|Data normalization !
+2022-09-22 10:50:05|INFO|transformer.py[:84]|input_info shep is (None, None, 500)
+2022-09-22 10:50:05|INFO|transformer.py[:85]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 10:50:05|INFO|transformer.py[:86]|encode_padding_mask shep is (None, 1, 1, None, 500)
+2022-09-22 10:50:05|INFO|transformer.py[:87]|positional_info shep is (1, 500, 128)
+2022-09-22 10:50:05|INFO|transformer.py[:125]|Start model validation !
+2022-09-22 10:50:05|INFO|transformer.py[:128]|Model persistence ./alphamind
+2022-09-22 10:55:08|INFO|transformer.py[:134]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500}
+2022-09-22 10:55:08|INFO|transformer.py[:109]|Data loading ./datasets
+2022-09-22 10:55:08|INFO|transformer.py[:111]|create model Transformer !
+2022-09-22 10:55:10|INFO|transformer.py[:119]|Create the model optimizer !
+2022-09-22 10:55:10|INFO|transformer.py[:123]|Start model training !
+2022-09-22 10:55:10|INFO|transformer.py[:71]|Data normalization !
+2022-09-22 10:55:10|INFO|transformer.py[:85]|input_info shep is (None, None, 500)
+2022-09-22 10:55:10|INFO|transformer.py[:86]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 10:55:10|INFO|transformer.py[:87]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 10:55:10|INFO|transformer.py[:88]|positional_info shep is (1, 500, 128)
+2022-09-22 10:55:10|INFO|transformer.py[:126]|Start model validation !
+2022-09-22 10:55:10|INFO|transformer.py[:129]|Model persistence ./alphamind
+2022-09-22 11:17:01|INFO|transformer.py[:193]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500}
+2022-09-22 11:17:01|INFO|transformer.py[:137]|Data loading ./datasets
+2022-09-22 11:17:01|INFO|transformer.py[:139]|create model Transformer !
+2022-09-22 11:17:03|INFO|transformer.py[:147]|Create the model optimizer !
+2022-09-22 11:18:00|INFO|transformer.py[:193]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt'}
+2022-09-22 11:18:00|INFO|transformer.py[:137]|Data loading ./datasets
+2022-09-22 11:18:00|INFO|transformer.py[:139]|create model Transformer !
+2022-09-22 11:18:01|INFO|transformer.py[:147]|Create the model optimizer !
+2022-09-22 11:18:01|INFO|transformer.py[:170]|Start model training !
+2022-09-22 11:21:01|INFO|transformer.py[:196]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500}
+2022-09-22 11:21:01|INFO|transformer.py[:137]|Data loading ./datasets
+2022-09-22 11:21:01|INFO|transformer.py[:139]|create model Transformer !
+2022-09-22 11:21:03|INFO|transformer.py[:147]|Create the model optimizer !
+2022-09-22 11:21:03|INFO|transformer.py[:170]|Start model training !
+2022-09-22 11:21:41|INFO|transformer.py[:197]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500}
+2022-09-22 11:21:41|INFO|transformer.py[:137]|Data loading ./datasets
+2022-09-22 11:21:41|INFO|transformer.py[:139]|create model Transformer !
+2022-09-22 11:21:43|INFO|transformer.py[:147]|Create the model optimizer !
+2022-09-22 11:21:43|INFO|transformer.py[:170]|Start model training !
+2022-09-22 11:22:07|INFO|transformer.py[:197]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500}
+2022-09-22 11:22:07|INFO|transformer.py[:137]|Data loading ./datasets
+2022-09-22 11:22:07|INFO|transformer.py[:139]|create model Transformer !
+2022-09-22 11:22:08|INFO|transformer.py[:147]|Create the model optimizer !
+2022-09-22 11:22:08|INFO|transformer.py[:170]|Start model training !
+2022-09-22 11:22:29|INFO|transformer.py[:197]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500}
+2022-09-22 11:22:29|INFO|transformer.py[:137]|Data loading ./datasets
+2022-09-22 11:22:29|INFO|transformer.py[:139]|create model Transformer !
+2022-09-22 11:22:30|INFO|transformer.py[:147]|Create the model optimizer !
+2022-09-22 11:22:30|INFO|transformer.py[:170]|Start model training !
+2022-09-22 11:25:18|INFO|transformer.py[:199]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500}
+2022-09-22 11:25:18|INFO|transformer.py[:137]|Data loading ./datasets
+2022-09-22 11:25:18|INFO|transformer.py[:139]|create model Transformer !
+2022-09-22 11:25:20|INFO|transformer.py[:147]|Create the model optimizer !
+2022-09-22 11:25:20|INFO|transformer.py[:170]|Start model training !
+2022-09-22 11:25:20|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:20|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:20|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:20|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:20|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:51|INFO|transformer.py[:199]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500}
+2022-09-22 11:25:51|INFO|transformer.py[:137]|Data loading ./datasets
+2022-09-22 11:25:51|INFO|transformer.py[:139]|create model Transformer !
+2022-09-22 11:25:52|INFO|transformer.py[:147]|Create the model optimizer !
+2022-09-22 11:25:52|INFO|transformer.py[:170]|Start model training !
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:52|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:52|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:52|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:52|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:52|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:25:53|INFO|transformer.py[:92]|Data normalization !
+2022-09-22 11:25:53|INFO|transformer.py[:106]|input_info shep is (None, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:107]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:108]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:25:53|INFO|transformer.py[:109]|positional_info shep is (1, 500, 128)
+2022-09-22 11:25:53|INFO|transformer.py[:191]|Start model validation !
+2022-09-22 11:25:53|INFO|transformer.py[:194]|Model persistence ./alphamind
+2022-09-22 11:31:13|INFO|transformer.py[:201]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500, 'show_data_shep': True}
+2022-09-22 11:31:13|INFO|transformer.py[:139]|Data loading ./datasets
+2022-09-22 11:31:13|INFO|transformer.py[:141]|create model Transformer !
+2022-09-22 11:31:15|INFO|transformer.py[:149]|Create the model optimizer !
+2022-09-22 11:31:15|INFO|transformer.py[:172]|Start model training !
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:15|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:15|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:15|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:15|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:15|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:16|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:16|INFO|transformer.py[:108]|input_info shep is (None, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:109]|embedding_info shep is (None, None, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:110]|mask_info shep is (None, 1, 1, None, 500)
+2022-09-22 11:31:16|INFO|transformer.py[:111]|positional_info shep is (1, 500, 128)
+2022-09-22 11:31:16|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:16|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:21|INFO|transformer.py[:201]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500, 'show_data_shep': False}
+2022-09-22 11:31:21|INFO|transformer.py[:139]|Data loading ./datasets
+2022-09-22 11:31:21|INFO|transformer.py[:141]|create model Transformer !
+2022-09-22 11:31:22|INFO|transformer.py[:149]|Create the model optimizer !
+2022-09-22 11:31:22|INFO|transformer.py[:172]|Start model training !
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:22|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:22|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:22|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 11:31:23|INFO|transformer.py[:93]|Data normalization !
+2022-09-22 11:31:23|INFO|transformer.py[:193]|Start model validation !
+2022-09-22 11:31:23|INFO|transformer.py[:196]|Model persistence ./alphamind
+2022-09-22 14:17:21|INFO|transformer.py[:264]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500, 'show_data_shep': False, 'num_heads': 6}
+2022-09-22 14:17:21|INFO|transformer.py[:201]|Data loading ./datasets
+2022-09-22 14:17:21|INFO|transformer.py[:203]|create model Transformer !
+2022-09-22 14:18:10|INFO|transformer.py[:261]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500, 'show_data_shep': False, 'num_heads': 8}
+2022-09-22 14:18:10|INFO|transformer.py[:198]|Data loading ./datasets
+2022-09-22 14:18:10|INFO|transformer.py[:200]|create model Transformer !
+2022-09-22 14:18:12|INFO|transformer.py[:209]|Create the model optimizer !
+2022-09-22 14:18:12|INFO|transformer.py[:232]|Start model training !
+2022-09-22 14:18:12|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:32|INFO|transformer.py[:261]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 10, 'ckpt_model_num': 500, 'show_data_shep': False, 'num_heads': 8}
+2022-09-22 14:18:32|INFO|transformer.py[:198]|Data loading ./datasets
+2022-09-22 14:18:32|INFO|transformer.py[:200]|create model Transformer !
+2022-09-22 14:18:33|INFO|transformer.py[:209]|Create the model optimizer !
+2022-09-22 14:18:33|INFO|transformer.py[:232]|Start model training !
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:33|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:33|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:33|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:55|INFO|transformer.py[:261]| Parameters of the loading ===> {'logger': <Logger model_log (DEBUG)>, 'network_name': 'Transformer', 'data_dir': './datasets', 'output_dir': './alphamind', 'tensorboard_dir': './tensorboard', 'input_vocab_size': 3256, 'embedding_size': 128, 'max_seq_length': 500, 'model_ckpt_name': 'transformer.model.ckpt', 'batch_size': 16, 'num_epochs': 2, 'ckpt_model_num': 500, 'show_data_shep': False, 'num_heads': 8}
+2022-09-22 14:18:55|INFO|transformer.py[:198]|Data loading ./datasets
+2022-09-22 14:18:55|INFO|transformer.py[:200]|create model Transformer !
+2022-09-22 14:18:56|INFO|transformer.py[:209]|Create the model optimizer !
+2022-09-22 14:18:56|INFO|transformer.py[:232]|Start model training !
+2022-09-22 14:18:56|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:56|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:56|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:56|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:56|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:56|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:56|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:56|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:56|INFO|transformer.py[:256]|Model persistence ./alphamind
+2022-09-22 14:18:56|INFO|transformer.py[:152]|Data normalization !
+2022-09-22 14:18:56|INFO|transformer.py[:253]|Start model validation !
+2022-09-22 14:18:56|INFO|transformer.py[:256]|Model persistence ./alphamind
