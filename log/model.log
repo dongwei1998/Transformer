@@ -1,8 +1,0 @@
-2023-02-22 13:12:01|INFO|gpu_git.py[:152]|Choosing the GPU device has largest free memory...
-2023-02-22 13:12:01|INFO|gpu_git.py[:109]|Sorted by free memory size
-2023-02-22 13:12:01|INFO|gpu_git.py[:165]|Using GPU 0:index:0 | gpu_name:NVIDIA GeForce RTX 3070 Laptop GPU | memory.free:8033 | memory.total:8192 | power.draw:31 | power.limit:1 | specified:True
-2023-02-22 13:12:12|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-02-22 13:18:39|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-02-22 13:20:33|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-02-22 13:53:31|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-02-22 13:54:08|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0

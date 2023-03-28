@@ -18,12 +18,15 @@ def load_data():
     # 葡萄牙语->英语
     examples, metadata = tfds.load('ted_hrlr_translate/pt_to_en', with_info=True, as_supervised=True)
     train_examples, val_examples = examples['train'], examples['validation']
+
     inp = []
     targ = []
+    targ_ids_label = []
     for pt, en in train_examples:
-        inp.append(pt.numpy())
-        targ.append(en.numpy())
-    return inp, targ
+        inp.append(" ".join(['[START]',pt.numpy().decode('utf-8'),'[END]']))
+        targ.append(" ".join(['[START]',en.numpy().decode('utf-8')]))
+        targ_ids_label.append(" ".join([en.numpy().decode('utf-8'), '[END]']))
+    return inp, targ,targ_ids_label
 
 
 
@@ -42,7 +45,7 @@ def tf_lower_and_split_punct(text):
     text = tf.strings.regex_replace(text, '[.?!,¿]', r' \0 ')
     # 分割添加开始结束标志.
     text = tf.strings.strip(text)
-    text = tf.strings.join(['[START]', text, '[END]'], separator=' ')
+    # text = tf.strings.join(['[START]', text, '[END]'], separator=' ')
     return text
 
 # 序列化工具
@@ -57,6 +60,7 @@ def text_processor(max_seq_length,vocabulary=None):
             vocabulary=vocabulary,
             output_sequence_length=max_seq_length
     )
+
 
 
 def load_text_processor(vocab_file_path,max_seq_length):
@@ -89,7 +93,7 @@ def preprocess(input_text, target_text):
 
 if __name__ == '__main__':
 
-    inp, targ = load_data()
+    inp, targ,targ_ids_label = load_data()
 
     input_vocab = '../config/input_vocab.txt'
     output_vocab = '../config/output_vocab.txt'
