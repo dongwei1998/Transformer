@@ -6,6 +6,9 @@
 # @Software  : PyCharm
 # =============================================
 import os
+
+import keras
+
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = '3'
 
 import tensorflow as tf
@@ -51,38 +54,24 @@ def CustomSchedule_test(args):
     plt.ylabel('learing rate')
     plt.show()
 
-def make_batches(ds):
-    return (
-        ds
-            .shuffle(1000)
-            .batch(4)
-            .map(prepare_batch, tf.data.AUTOTUNE)
-            .prefetch(buffer_size=tf.data.AUTOTUNE))
+
+def print_translation(sentence, tokens, ground_truth):
+  print(f'{"Input:":15s}: {sentence}')
+  print(f'{"Prediction":15s}: {tokens}')
+  print(f'{"Ground truth":15s}: {ground_truth}')
 
 
-def make_batch(inp, targ,token_tool_a,token_tool_b,batch_size):
-    inp_ids = []
-    targ_ids = []
-    targ_ids_label = []
-    if len(inp) == len(targ):
-        for idx in range(len(inp)):
-            print(idx)
-            inp_ids.append(token_tool_a.text_to_ids(inp[idx]))
-            targ_ids.append(token_tool_b.text_to_ids(inp[idx][:-1]))
-            targ_ids_label.append(token_tool_b.text_to_ids(targ[idx][1:]))
-    else:
-        raise print("inp len != targe len")
+class ExportTranslator(tf.Module):
+  def __init__(self, translator):
+    self.translator = translator
 
-    inp_ids = tf.convert_to_tensor(inp_ids, dtype=tf.int32)
-    targ_ids = tf.convert_to_tensor(targ_ids, dtype=tf.int32)
-    targ_ids_label = tf.convert_to_tensor(targ_ids_label, dtype=tf.int32)
+  @tf.function(input_signature=[tf.TensorSpec(shape=[], dtype=tf.string)])
+  def __call__(self, sentence):
+    (result,
+     tokens,
+     attention_weights) = self.translator(sentence, max_length=args.max_seq_length)
 
-    dataset = tf.data.Dataset.from_tensor_slices((inp_ids, targ_ids), targ_ids_label)
-    dataset.shuffle(buffer_size=10000)
-    dataset = dataset.batch(batch_size)
-
-    return dataset
-
+    return result
 
 
 
@@ -112,6 +101,7 @@ def train_model(args):
     dataset.shuffle(buffer_size=10000)
     dataset = dataset.batch(args.batch_size)
 
+
     # 数据可视化
     for batch, (inp_ids, targ_ids, targ_label_ids) in enumerate(dataset):
         print("原始读取的 文本 数据...")
@@ -128,10 +118,8 @@ def train_model(args):
         print(token_tool_b.ids_to_text(targ_label_ids))
         break
 
-
-
     # 模型构建
-    model = Transformer(
+    transformer = Transformer(
         num_layers=args.num_layers,
         d_model=args.embedding_size,
         num_heads=args.num_heads,
@@ -147,59 +135,66 @@ def train_model(args):
     # 定义目标函数
     loss_object = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True,
                                                                 reduction='none')
-
     train_loss = tf.keras.metrics.Mean(name='train_loss')
     train_accuracy = tf.keras.metrics.SparseCategoricalAccuracy(name='train_accuracy')
 
-    # 模型保存器
-    ckpt = tf.train.Checkpoint(transformer=model,
-                               optimizer=optimizer)
-    # ckpt管理器
-    ckpt_manager = tf.train.CheckpointManager(ckpt, args.checkpoint_path, max_to_keep=3)
 
-    if ckpt_manager.latest_checkpoint:
-        ckpt.restore(ckpt_manager.latest_checkpoint)
-        print('last checkpoit restore')
+    # 模型保存器
+    if os.path.exists(args.checkpoint_path):
+        print(f'load model {args.checkpoint_path}')
+        tf.keras.models.load_model(args.checkpoint_path, custom_objects={'transformer': transformer})
+
+
+
 
     step = 0
     step_list = []
     loss_list = []
-
     for epoch in range(args.num_epochs):
-        start = time.time()
+        start_s = time.time()
         # 重置记录项
         train_loss.reset_states()
         train_accuracy.reset_states()
         for batch, (inp_ids, targ_ids,targ_label_ids) in enumerate(dataset):
             with tf.GradientTape() as tape:
-                logits = model((inp_ids, targ_ids))
+                logits = transformer((inp_ids, targ_ids))
                 loss = loss_fun(targ_label_ids, logits, loss_object)
             # 求梯度
-            gradients = tape.gradient(loss, model.trainable_variables)
+            gradients = tape.gradient(loss, transformer.trainable_variables)
             # 反向传播
-            optimizer.apply_gradients(zip(gradients, model.trainable_variables))
+            optimizer.apply_gradients(zip(gradients, transformer.trainable_variables))
             # 记录loss和准确率
             train_loss(loss)
             train_accuracy(targ_label_ids, logits)
-            if batch % args.step_env_model == 0:
+            if step % args.step_env_model == 0:
                 loss = train_loss.result()
                 print('epoch {}, batch {}, loss:{:.4f}, acc:{:.4f}'.format(
                     epoch + 1, batch, loss, train_accuracy.result()
                 ))
                 step_list.append(step)
                 loss_list.append(loss)
-            step += 1
-        if (epoch + 1) % args.ckpt_model_num == 0:
-            ckpt_save_path = ckpt_manager.save()
-            print('epoch {}, save model at {}'.format(
-                epoch + 1, ckpt_save_path
-            ))
+
+            # custom_objects = {'CustomLayer': CustomLayer,
+            #                   'custom_activation': custom_activation}
+            # with keras.utils.custom_object_scope(custom_objects):
+            #     new_model = keras.Model.from_config(config)
+
+
+            if (step + 1) % args.ckpt_model_num == 0:
+                tf.keras.models.save_model(transformer, args.checkpoint_path)
+                print('epoch {}, save model at {}'.format(
+                    epoch + 1, args.checkpoint_path
+                ))
+            step+=1
+            print(step)
 
         print('epoch {}, loss:{:.4f}, acc:{:.4f}'.format(
             epoch + 1, train_loss.result(), train_accuracy.result()
         ))
+        print('time in 1 epoch:{} secs\n'.format(time.time() - start_s))
 
-        print('time in 1 epoch:{} secs\n'.format(time.time() - start))
+
+
     # 打印loss
     plt.plot(step_list, loss_list)
     plt.xlabel('train step')
@@ -214,5 +209,7 @@ if __name__ == '__main__':
     # gpu_git.check_gpus(mode=1, logger=args.logger)
     # 训练
     train_model(args)
+
+
 
 

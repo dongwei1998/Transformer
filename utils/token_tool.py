@@ -95,6 +95,8 @@ def standardize(text):
     ¿Todavía está en casa?
     [START] ¿ todavia esta en casa ? [END]
     '''
+    # 去除 无用的标点符号
+    # text.replace('``', '').replace("''", '')
     # # 分离重音字符
     # text = tf_text.normalize_utf8(text, 'NFKD')
     # text = tf.strings.lower(text)

@@ -25,7 +25,7 @@ def parser_opt():
     args = EasyDict()
     logging.config.fileConfig(os.environ.get("logging_ini"))
     args.logger = logging.getLogger('model_log')
-    args.checkpoint_path = os.environ.get('checkpoint_path')
+    args.checkpoint_path = os.path.join(os.environ.get('checkpoint_path'),os.environ.get('model_ckpt_name'))
     args.logging_ini = os.environ.get('logging_ini')
     args.train_data_file = os.environ.get('train_data_file')
     args.test_data_file = os.environ.get('test_data_file')
@@ -44,7 +44,7 @@ def parser_opt():
     args.max_seq_length = int(os.environ.get('max_seq_length'))
     args.ckpt_model_num = int(os.environ.get('ckpt_model_num'))
     args.step_env_model = int(os.environ.get('step_env_model'))
-    args.model_ckpt_name = os.environ.get('model_ckpt_name')
+
 
 
     return args

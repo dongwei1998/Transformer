@@ -209,13 +209,13 @@ class Encoder(tf.keras.layers.Layer):
         })
         return config
 
-    def call(self, x):
+    def call(self, x,training):
         # print(" 编码器"+"输入:"+str(x.shape))
         # `x` is token-IDs shape: (batch, seq_len)
         x = self.pos_embedding(x)  # Shape `(batch_size, seq_len, d_model)`.
 
         # Add dropout.
-        x = self.dropout(x)
+        x = self.dropout(x,training)
 
         for i in range(self.num_layers):
             x = self.enc_layers[i](x)
@@ -307,11 +307,12 @@ class Decoder(tf.keras.layers.Layer):
             "num_heads":self.num_heads,
             "dff":self.dff,
             "vocab_size":self.vocab_size,
-            "dropout_rate":self.dropout_rate
+            "dropout_rate":self.dropout_rate,
+            "last_attn_scores":self.last_attn_scores
         })
         return config
 
-    def call(self, x, context):
+    def call(self, x, context,training):
         # `x` is token-IDs shape (batch, target_seq_len)
         #
         # print(" 解码器"+"输入:"+str(x.shape) +
@@ -321,7 +322,7 @@ class Decoder(tf.keras.layers.Layer):
         x = self.pos_embedding(x)  # (batch_size, target_seq_len, d_model)
 
 
-        x = self.dropout(x)
+        x = self.dropout(x,training)
 
         for i in range(self.num_layers):
             x = self.dec_layers[i](x, context)
@@ -376,14 +377,14 @@ class Transformer(tf.keras.Model):
         return config
 
 
-    def call(self, inputs):
+    def call(self, inputs,training=True):
         # To use a Keras model with `.fit` you must pass all your inputs in the
         # first argument.
         context,x = inputs
 
-        context = self.encoder(context)  # (batch_size, context_len, d_model)
+        context = self.encoder(context,training)  # (batch_size, context_len, d_model)
 
-        x = self.decoder(x, context)  # (batch_size, target_len, d_model)
+        x = self.decoder(x, context,training)  # (batch_size, target_len, d_model)
 
         # Final linear layer output.
         logits = self.final_layer(x)  # (batch_size, target_len, target_vocab_size)
