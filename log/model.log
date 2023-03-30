@@ -1,0 +1,33 @@
+2023-03-30 09:57:26|INFO|gpu_git.py[:152]|Choosing the GPU device has largest free memory...
+2023-03-30 09:57:26|INFO|gpu_git.py[:109]|Sorted by free memory size
+2023-03-30 09:57:26|INFO|gpu_git.py[:165]|Using GPU 0:index:0 | gpu_name:NVIDIA GeForce RTX 3070 Laptop GPU | memory.free:7849 | memory.total:8192 | power.draw:14 | power.limit:1 | specified:True
+2023-03-30 13:55:47|INFO|gpu_git.py[:152]|Choosing the GPU device has largest free memory...
+2023-03-30 13:55:47|INFO|gpu_git.py[:109]|Sorted by free memory size
+2023-03-30 13:55:47|INFO|gpu_git.py[:165]|Using GPU 0:index:0 | gpu_name:NVIDIA GeForce RTX 3070 Laptop GPU | memory.free:7726 | memory.total:8192 | power.draw:16 | power.limit:1 | specified:True
+2023-03-30 14:07:53|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 14:09:05|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 14:10:48|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 14:12:09|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:16:01|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:18:26|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:21:26|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:31:25|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:33:37|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:34:55|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:35:41|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:36:44|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:39:57|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:41:17|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:42:16|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:42:54|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:44:51|INFO|gpu_git.py[:152]|Choosing the GPU device has largest free memory...
+2023-03-30 15:44:51|INFO|gpu_git.py[:109]|Sorted by free memory size
+2023-03-30 15:44:51|INFO|gpu_git.py[:165]|Using GPU 0:index:0 | gpu_name:NVIDIA GeForce RTX 3070 Laptop GPU | memory.free:7623 | memory.total:8192 | power.draw:18 | power.limit:1 | specified:True
+2023-03-30 15:45:24|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:45:55|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:48:35|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:48:54|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:49:17|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 15:51:50|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
+2023-03-30 16:02:51|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
+2023-03-30 16:02:51|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0

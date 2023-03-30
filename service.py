@@ -22,7 +22,7 @@ class Translator(tf.Module):
         args.input_vocab_size = self.tokenizers_a.tokenizers.vocabulary_size()
         args.target_vocab_size = self.tokenizers_b.tokenizers.vocabulary_size()
         # 创建模型
-        self.transformer = Transformer(
+        transformer= Transformer(
             num_layers=args.num_layers,
             d_model=args.embedding_size,
             num_heads=args.num_heads,
@@ -31,8 +31,7 @@ class Translator(tf.Module):
             target_vocab_size=args.target_vocab_size,
             dropout_rate=args.dropout_rate)
         # 加载模型
-        tf.keras.models.load_model(args.checkpoint_path, custom_objects={'transformer': self.transformer})
-
+        self.transformer = tf.keras.models.load_model(args.checkpoint_path, custom_objects={'transformer': transformer})
 
 
 
@@ -100,6 +99,10 @@ if __name__ == '__main__':
     sentence = 'este é um problema que temos que resolver.'
     ground_truth = 'this is a problem we have to solve .'
     # 模型推理
-    text, tokens, attention_weights = model(sentence)
-    # 输出打印
-    print_translation(sentence, text, ground_truth)
+    while True:
+        input_str = input('Question :'.encode('utf-8').decode('utf-8'))
+        if input_str == 'exit':
+            exit()
+        text, tokens, attention_weights = model(sentence)
+        # 输出打印
+        print_translation(sentence, text, ground_truth)

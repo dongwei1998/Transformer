@@ -8,11 +8,13 @@ examples, metadata = tfds.load('ted_hrlr_translate/pt_to_en', with_info=True, as
 train_examples, val_examples = examples['train'], examples['validation']
 
 # 模型训练
-python train.py
-
+python train.py  可以自定义添加日志 打印的一些配置
+python train.py  通过 fit训练
 
 # 模型服务启动
+python service.py
 
 
 
 # 模型结果预测
+python flasktest.py

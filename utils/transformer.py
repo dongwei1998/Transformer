@@ -12,6 +12,56 @@ import tensorflow as tf
 from utils import data_help, parameter
 
 
+# 动态学习率
+class CustomSchedule(tf.keras.optimizers.schedules.LearningRateSchedule):
+    def __init__(self, d_model, warmup_steps=4000):
+        super(CustomSchedule, self).__init__()
+
+        self.d_model = tf.cast(d_model, tf.float32)
+        self.warmup_steps = warmup_steps
+
+    def __call__(self, step):
+        arg1 = tf.math.rsqrt(step)
+        arg2 = step * (self.warmup_steps ** -1.5)
+
+        return tf.math.rsqrt(self.d_model) * tf.math.minimum(arg1, arg2)
+
+
+
+
+def masked_loss(label, pred):
+  mask = label != 0
+  loss_object = tf.keras.losses.SparseCategoricalCrossentropy(
+    from_logits=True, reduction='none')
+  loss = loss_object(label, pred)
+
+  mask = tf.cast(mask, dtype=loss.dtype)
+  loss *= mask
+
+  loss = tf.reduce_sum(loss)/tf.reduce_sum(mask)
+  return loss
+
+
+def masked_accuracy(label, pred):
+  pred = tf.argmax(pred, axis=2)
+  label = tf.cast(label, pred.dtype)
+  match = label == pred
+
+  mask = label != 0
+
+  match = match & mask
+
+  match = tf.cast(match, dtype=tf.float32)
+  mask = tf.cast(mask, dtype=tf.float32)
+  return tf.reduce_sum(match)/tf.reduce_sum(mask)
+
+
+
+
+
+
+
+
 # 位置编码
 def positional_encoding(length, depth):
     depth = depth / 2
@@ -307,8 +357,7 @@ class Decoder(tf.keras.layers.Layer):
             "num_heads":self.num_heads,
             "dff":self.dff,
             "vocab_size":self.vocab_size,
-            "dropout_rate":self.dropout_rate,
-            "last_attn_scores":self.last_attn_scores
+            "dropout_rate":self.dropout_rate
         })
         return config
 
@@ -377,20 +426,20 @@ class Transformer(tf.keras.Model):
         return config
 
 
-    def call(self, inputs,training=True):
+
+
+    def call(self, inputs,training):
         # To use a Keras model with `.fit` you must pass all your inputs in the
         # first argument.
         context,x = inputs
-
         context = self.encoder(context,training)  # (batch_size, context_len, d_model)
-
         x = self.decoder(x, context,training)  # (batch_size, target_len, d_model)
-
         # Final linear layer output.
         logits = self.final_layer(x)  # (batch_size, target_len, target_vocab_size)
-
         # Return the final output and the attention weights.
         return logits
+
+
 
 
 if __name__ == '__main__':
@@ -404,21 +453,30 @@ if __name__ == '__main__':
     # 参数加载
     args = parameter.parser_opt()
     # 数据加载
-    inp, targ = data_help.load_data()
+    inp, targ, targ_label = data_help.load_data()
+    from token_tool import Tokenizers,standardize
     # 数据预处理 序列化工具加载
     if os.path.exists(args.input_vocab) and os.path.exists(args.target_vocab):
-        input_text_processor = data_help.load_text_processor(args.input_vocab, args.max_seq_length)
-        output_text_processor = data_help.load_text_processor(args.target_vocab, args.max_seq_length)
+        token_tool_a = Tokenizers(input_vocab=args.input_vocab, max_length=args.max_seq_length, standardize=standardize)
+        token_tool_b = Tokenizers(input_vocab=args.target_vocab, max_length=args.max_seq_length,
+                                  standardize=standardize)
     else:
-        input_text_processor = data_help.create_text_processor(args.input_vocab, inp, args.max_seq_length)
-        output_text_processor = data_help.create_text_processor(args.target_vocab, targ, args.max_seq_length)
+        token_tool_a = Tokenizers(input_vocab=args.input_vocab, data=inp, max_length=args.max_seq_length,
+                                  standardize=standardize)
+        token_tool_b = Tokenizers(input_vocab=args.target_vocab, data=targ, max_length=args.max_seq_length,
+                                  standardize=standardize)
 
-    # 原数据据打乱 批次化
-    dataset = tf.data.Dataset.from_tensor_slices((inp, targ))
-    dataset = dataset.batch(args.batch_size)
     # 获取词表大小
-    args.input_vocab_size = input_text_processor.vocabulary_size()
-    args.target_vocab_size = output_text_processor.vocabulary_size()
+    args.input_vocab_size = token_tool_a.tokenizers.vocabulary_size()
+    args.target_vocab_size = token_tool_b.tokenizers.vocabulary_size()
+
+    inp_ids = token_tool_a.text_to_ids(inp)
+    targ_ids = token_tool_b.text_to_ids(targ)
+    targ_label_ids = token_tool_b.text_to_ids(targ_label)
+
+    dataset = tf.data.Dataset.from_tensor_slices((inp_ids, targ_ids, targ_label_ids))
+    dataset.shuffle(buffer_size=10000)
+    dataset = dataset.batch(args.batch_size)
 
     # 模型构建
     transformer = Transformer(
@@ -429,6 +487,17 @@ if __name__ == '__main__':
         input_vocab_size=args.input_vocab_size,
         target_vocab_size=args.target_vocab_size,
         dropout_rate=dropout_rate)
+
+
+
+    learning_rate = CustomSchedule(d_model)
+    optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98,
+                                         epsilon=1e-9)
+
+    transformer.compile(
+        loss=masked_loss,
+        optimizer=optimizer,
+        metrics=[masked_accuracy])
 
 
     # 构建预训练的模型
