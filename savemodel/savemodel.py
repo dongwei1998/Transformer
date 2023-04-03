@@ -8,35 +8,49 @@
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = '1'
 from tensorflow import keras
+import tensorflow as tf
 import numpy as np
 
-def get_model():
-    # Create a simple model.
-    inputs = keras.Input(shape=(32,))
-    outputs = keras.layers.Dense(1)(inputs)
-    model = keras.Model(inputs, outputs)
-    model.compile(optimizer="adam", loss="mean_squared_error")
-    return model
+class CustomLayer(keras.layers.Layer):
+    def __init__(self, units=32, **kwargs):
+        super(CustomLayer, self).__init__(**kwargs)
+        self.units = units
+
+    def build(self, input_shape):
+        self.w = self.add_weight(
+            shape=(input_shape[-1], self.units),
+            initializer="random_normal",
+            trainable=True,
+        )
+        self.b = self.add_weight(
+            shape=(self.units,), initializer="random_normal", trainable=True
+        )
+
+    def call(self, inputs):
+        return tf.matmul(inputs, self.w) + self.b
+
+    def get_config(self):
+        config = super(CustomLayer, self).get_config()
+        config.update({"units": self.units})
+        return config
 
 
-model = get_model()
+def custom_activation(x):
+    return tf.nn.tanh(x) ** 2
 
-# Train the model.
-test_input = np.random.random((128, 32))
-test_target = np.random.random((128, 1))
-model.fit(test_input, test_target)
 
-# Calling `save('my_model')` creates a SavedModel folder `my_model`.
-model.save("my_model")
-
-# It can be used to reconstruct the model identically.
-reconstructed_model = keras.models.load_model("my_model")
-
-# Let's check:
-np.testing.assert_allclose(
-    model.predict(test_input), reconstructed_model.predict(test_input)
-)
-
-# The reconstructed model is already compiled and has retained the optimizer
-# state, so training can resume:
-reconstructed_model.fit(test_input, test_target)
+# Make a model with the CustomLayer and custom_activation
+inputs = keras.Input((32,))
+x = CustomLayer(32)(inputs)
+outputs = keras.layers.Activation(custom_activation)(x)
+model = keras.Model(inputs, outputs)
+print(model)
+# Retrieve the config
+config = model.get_config()
+serialized_layer = keras.layers.serialize(model)
+print(serialized_layer)
+# At loading time, register the custom objects with a `custom_object_scope`:
+custom_objects = {"CustomLayer": CustomLayer, "custom_activation": custom_activation}
+with keras.utils.custom_object_scope(custom_objects):
+    new_model = keras.Model.from_config(config)
+    print(new_model)

@@ -11,20 +11,36 @@ import numpy as np
 import tensorflow as tf
 from utils import data_help, parameter
 
-
 # 动态学习率
 class CustomSchedule(tf.keras.optimizers.schedules.LearningRateSchedule):
     def __init__(self, d_model, warmup_steps=4000):
         super(CustomSchedule, self).__init__()
+        self.d_model = d_model
+        self.d_model = tf.cast(self.d_model, tf.float32)
 
-        self.d_model = tf.cast(d_model, tf.float32)
         self.warmup_steps = warmup_steps
+
+    def get_config(self):
+        config={
+            "d_model":self.d_model,
+            "warmup_steps":self.warmup_steps,
+        }
+        return config
+
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)
+
+
+
 
     def __call__(self, step):
         arg1 = tf.math.rsqrt(step)
         arg2 = step * (self.warmup_steps ** -1.5)
 
         return tf.math.rsqrt(self.d_model) * tf.math.minimum(arg1, arg2)
+
+
 
 
 
@@ -88,13 +104,7 @@ class PositionalEmbedding(tf.keras.layers.Layer):
         self.embedding = tf.keras.layers.Embedding(vocab_size, d_model, mask_zero=True)
         self.pos_encoding = positional_encoding(length=2048, depth=d_model)
 
-    def get_config(self):
-        config = super().get_config()
-        config.update({
-            "d_model":self.d_model,
-            "vocab_size":self.vocab_size,
-        })
-        return config
+
 
     def compute_mask(self, *args, **kwargs):
         return self.embedding.compute_mask(*args, **kwargs)
@@ -107,6 +117,16 @@ class PositionalEmbedding(tf.keras.layers.Layer):
         x = x + self.pos_encoding[tf.newaxis, :length, :]
         return x
 
+    def get_config(self):
+        config={
+            "d_model":self.d_model,
+            "vocab_size":self.vocab_size,
+        }
+        return config
+
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)
 
 
 # 基础的注意力
@@ -176,19 +196,25 @@ class FeedForward(tf.keras.layers.Layer):
         self.add = tf.keras.layers.Add()
         self.layer_norm = tf.keras.layers.LayerNormalization()
 
-    def get_config(self):
-        config = super().get_config()
-        config.update({
-            "d_model":self.d_model,
-            "dff":self.dff,
-            "dropout_rate":self.dropout_rate
-        })
-        return config
+
 
     def call(self, x):
         x = self.add([x, self.seq(x)])
         x = self.layer_norm(x)
         return x
+
+    def get_config(self):
+
+        config={
+            "d_model":self.d_model,
+            "dff":self.dff,
+            "dropout_rate":self.dropout_rate
+        }
+        return config
+
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)
 
 
 # 编码器层
@@ -207,15 +233,7 @@ class EncoderLayer(tf.keras.layers.Layer):
 
         self.ffn = FeedForward(d_model, dff)
 
-    def get_config(self):
-        config = super().get_config()
-        config.update({
-            "d_model":self.d_model,
-            "num_heads":self.num_heads,
-            "dff":self.dff,
-            "dropout_rate":self.dropout_rate
-        })
-        return config
+
 
     def call(self, x):
         x = self.self_attention(x)
@@ -223,10 +241,26 @@ class EncoderLayer(tf.keras.layers.Layer):
         return x
 
 
+    def get_config(self):
+
+        config={
+            "d_model":self.d_model,
+            "num_heads":self.num_heads,
+            "dff":self.dff,
+            "dropout_rate":self.dropout_rate
+        }
+        return config
+
+
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)
+
+
 # 编码器
 class Encoder(tf.keras.layers.Layer):
     def __init__(self, *, num_layers, d_model, num_heads,
-                 dff, vocab_size, dropout_rate=0.1):
+                 dff, vocab_size, dropout_rate=0.1,training):
         super().__init__()
 
         self.d_model = d_model
@@ -235,6 +269,7 @@ class Encoder(tf.keras.layers.Layer):
         self.dff = dff
         self.vocab_size = vocab_size
         self.dropout_rate = dropout_rate
+        self.training=training
 
         self.pos_embedding = PositionalEmbedding(
             vocab_size=vocab_size, d_model=d_model)
@@ -247,30 +282,36 @@ class Encoder(tf.keras.layers.Layer):
             for _ in range(num_layers)]
         self.dropout = tf.keras.layers.Dropout(dropout_rate)
 
-    def get_config(self):
-        config = super().get_config()
-        config.update({
-            "d_model":self.d_model,
-            "num_layers":self.num_layers,
-            "num_heads":self.num_heads,
-            "dff":self.dff,
-            "vocab_size":self.vocab_size,
-            "dropout_rate":self.dropout_rate
-        })
-        return config
 
-    def call(self, x,training):
+
+    def call(self, x):
         # print(" 编码器"+"输入:"+str(x.shape))
         # `x` is token-IDs shape: (batch, seq_len)
         x = self.pos_embedding(x)  # Shape `(batch_size, seq_len, d_model)`.
 
         # Add dropout.
-        x = self.dropout(x,training)
+        x = self.dropout(x,self.training)
 
         for i in range(self.num_layers):
             x = self.enc_layers[i](x)
 
         return x  # Shape `(batch_size, seq_len, d_model)`.
+
+    def get_config(self):
+        config = {
+            "d_model": self.d_model,
+            "num_layers": self.num_layers,
+            "num_heads": self.num_heads,
+            "dff": self.dff,
+            "vocab_size": self.vocab_size,
+            "dropout_rate": self.dropout_rate,
+            "training": self.training
+        }
+        return config
+
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)
 
 
 # 解码器层
@@ -281,7 +322,7 @@ class DecoderLayer(tf.keras.layers.Layer):
                  num_heads,
                  dff,
                  dropout_rate=0.1):
-        super(DecoderLayer, self).__init__()
+        super().__init__()
 
 
 
@@ -304,15 +345,6 @@ class DecoderLayer(tf.keras.layers.Layer):
 
 
 
-    def get_config(self):
-        config = super().get_config()
-        config.update({
-            "d_model":self.d_model,
-            "num_heads":self.num_heads,
-            "dff":self.dff,
-            "dropout_rate":self.dropout_rate
-        })
-        return config
 
 
     def call(self, x, context):
@@ -325,19 +357,32 @@ class DecoderLayer(tf.keras.layers.Layer):
         x = self.ffn(x)  # Shape `(batch_size, seq_len, d_model)`.
         return x
 
+    def get_config(self):
+
+        config={
+            "d_model":self.d_model,
+            "num_heads":self.num_heads,
+            "dff":self.dff,
+            "dropout_rate":self.dropout_rate
+        }
+        return config
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)
+
 
 # 解码器
 class Decoder(tf.keras.layers.Layer):
     def __init__(self, *, num_layers, d_model, num_heads, dff, vocab_size,
-                 dropout_rate=0.1):
+                 dropout_rate=0.1,training):
         super(Decoder, self).__init__()
-
         self.d_model = d_model
         self.num_layers = num_layers
         self.num_heads = num_heads
         self.dff = dff
         self.vocab_size = vocab_size
         self.dropout_rate = dropout_rate
+        self.training = training
 
         self.pos_embedding = PositionalEmbedding(vocab_size=vocab_size,
                                                  d_model=d_model)
@@ -349,19 +394,11 @@ class Decoder(tf.keras.layers.Layer):
 
         self.last_attn_scores = None
 
-    def get_config(self):
-        config = super().get_config()
-        config.update({
-            "d_model":self.d_model,
-            "num_layers":self.num_layers,
-            "num_heads":self.num_heads,
-            "dff":self.dff,
-            "vocab_size":self.vocab_size,
-            "dropout_rate":self.dropout_rate
-        })
-        return config
 
-    def call(self, x, context,training):
+
+
+
+    def call(self, x, context):
         # `x` is token-IDs shape (batch, target_seq_len)
         #
         # print(" 解码器"+"输入:"+str(x.shape) +
@@ -371,7 +408,7 @@ class Decoder(tf.keras.layers.Layer):
         x = self.pos_embedding(x)  # (batch_size, target_seq_len, d_model)
 
 
-        x = self.dropout(x,training)
+        x = self.dropout(x,self.training)
 
         for i in range(self.num_layers):
             x = self.dec_layers[i](x, context)
@@ -381,11 +418,28 @@ class Decoder(tf.keras.layers.Layer):
         # The shape of x is (batch_size, target_seq_len, d_model).
         return x
 
+    def get_config(self):
+        config = super(Decoder, self).get_config()
+        config.update({
+            "d_model": self.d_model,
+            "num_layers": self.num_layers,
+            "num_heads": self.num_heads,
+            "dff": self.dff,
+            "vocab_size": self.vocab_size,
+            "dropout_rate": self.dropout_rate,
+            "training": self.training
+        })
+        return config
+
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)
+
 
 # Transformer模型
 class Transformer(tf.keras.Model):
     def __init__(self, *, num_layers, d_model, num_heads, dff,
-                 input_vocab_size, target_vocab_size, dropout_rate=0.1):
+                 input_vocab_size, target_vocab_size, dropout_rate=0.1,training=True):
         super().__init__()
 
         self.d_model = d_model
@@ -395,51 +449,57 @@ class Transformer(tf.keras.Model):
         self.input_vocab_size = input_vocab_size
         self.target_vocab_size = target_vocab_size
         self.dropout_rate = dropout_rate
+        self.training = training
 
         self.encoder = Encoder(num_layers=num_layers, d_model=d_model,
                                num_heads=num_heads, dff=dff,
                                vocab_size=input_vocab_size,
-                               dropout_rate=dropout_rate)
+                               dropout_rate=dropout_rate,
+                               training=training)
 
         self.decoder = Decoder(num_layers=num_layers, d_model=d_model,
                                num_heads=num_heads, dff=dff,
                                vocab_size=target_vocab_size,
-                               dropout_rate=dropout_rate)
+                               dropout_rate=dropout_rate,
+                               training=training)
 
         self.final_layer = tf.keras.layers.Dense(target_vocab_size)
 
 
 
-
-
-    def get_config(self):
-        config = super().get_config()
-        config.update({
-            "d_model":self.d_model,
-            "num_layers":self.num_layers,
-            "num_heads":self.num_heads,
-            "dff":self.dff,
-            "input_vocab_size":self.input_vocab_size,
-            "target_vocab_size":self.target_vocab_size,
-            "dropout_rate":self.dropout_rate
-        })
-        return config
-
-
-
-
-    def call(self, inputs,training):
+    def call(self, inputs):
         # To use a Keras model with `.fit` you must pass all your inputs in the
         # first argument.
         context,x = inputs
-        context = self.encoder(context,training)  # (batch_size, context_len, d_model)
-        x = self.decoder(x, context,training)  # (batch_size, target_len, d_model)
+        context = self.encoder(context)  # (batch_size, context_len, d_model)
+        x = self.decoder(x, context)  # (batch_size, target_len, d_model)
         # Final linear layer output.
         logits = self.final_layer(x)  # (batch_size, target_len, target_vocab_size)
         # Return the final output and the attention weights.
         return logits
 
+    def get_config(self):
+        config = {
+            "d_model": self.d_model,
+            "num_layers": self.num_layers,
+            "num_heads": self.num_heads,
+            "dff": self.dff,
+            "input_vocab_size": self.input_vocab_size,
+            "target_vocab_size": self.target_vocab_size,
+            "dropout_rate": self.dropout_rate,
+            "training": self.training,
+        }
+        return config
 
+    @classmethod
+    def from_config(cls, config):
+        return cls(**config)
+
+
+
+
+def prepare_batch(pt, en_inputs, en_labels):
+    return (pt, en_inputs), en_labels
 
 
 if __name__ == '__main__':
@@ -474,9 +534,10 @@ if __name__ == '__main__':
     targ_ids = token_tool_b.text_to_ids(targ)
     targ_label_ids = token_tool_b.text_to_ids(targ_label)
 
+
     dataset = tf.data.Dataset.from_tensor_slices((inp_ids, targ_ids, targ_label_ids))
     dataset.shuffle(buffer_size=10000)
-    dataset = dataset.batch(args.batch_size)
+    dataset = dataset.batch(args.batch_size).map(prepare_batch, tf.data.AUTOTUNE).prefetch(buffer_size=tf.data.AUTOTUNE)
 
     # 模型构建
     transformer = Transformer(
@@ -489,7 +550,6 @@ if __name__ == '__main__':
         dropout_rate=dropout_rate)
 
 
-
     learning_rate = CustomSchedule(d_model)
     optimizer = tf.keras.optimizers.Adam(learning_rate, beta_1=0.9, beta_2=0.98,
                                          epsilon=1e-9)
@@ -499,19 +559,15 @@ if __name__ == '__main__':
         optimizer=optimizer,
         metrics=[masked_accuracy])
 
+    serialized_layer = tf.keras.layers.serialize(transformer)
+    transformer = tf.keras.layers.deserialize(
+        transformer, custom_objects={"transformer": transformer}
+    )
 
-    # 构建预训练的模型
-    for batch, (example_input_batch, example_target_batch) in enumerate(dataset):
-        # 数据转换id
-        input_tokens = input_text_processor(example_input_batch)
-        target_tokens = output_text_processor(example_target_batch)
+    # 训练
+    transformer.fit(dataset,
+                    epochs=args.num_epochs,
+                    validation_data=None)
 
-        # 训练模型
-        output = transformer((input_tokens, target_tokens))
 
-        # 模型可视化
-        transformer.summary()
-        print("输入: %s\n" % input_text_processor(example_input_batch))
-        print("输出: %s\n" % output.shape)
-
-        break
+    tf.keras.models.save_model(transformer, args.checkpoint_path)

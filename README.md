@@ -18,3 +18,10 @@ python service.py
 
 # 模型结果预测
 python flasktest.py
+
+
+# 模型签名查看
+saved_model_cli show --dir ./ckpt_model/translator
+saved_model_cli show --dir ./ckpt_model/translator --tag_set serve
+saved_model_cli show --dir ./ckpt_model/translator --signature_def serving_default
+

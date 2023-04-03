@@ -73,18 +73,20 @@ class Tokenizers(tf.keras.layers.TextVectorization):
 
 
     def ids_to_text(self,ids_s):
-        _word_list = []
-        for ids in ids_s:
-            _word = []
-            # 去除填充的0
-            for _id in ids.numpy():
-                if _id in self.ids_to_text_dict.keys():
-                    if _id != 0:
-                        _word.append(self.ids_to_text_dict[_id])
-                else:
-                    _word.append('[UNK]')
-            _word_list.append(' '.join(_word))
-        return _word_list
+        return ids_s
+        # _word_list = []
+        # for ids in ids_s:
+        #     _word = []
+        #     # 去除填充的0
+        #     for _id in ids.numpy():
+        #         if _id in self.ids_to_text_dict.keys():
+        #             if _id != 0:
+        #                 _word.append(self.ids_to_text_dict[_id])
+        #         else:
+        #             _word.append('[UNK]')
+        #     _word_list.append(' '.join(_word))
+        #
+        # return _word_list
 
 
 

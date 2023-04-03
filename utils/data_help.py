@@ -26,7 +26,7 @@ def load_data():
         inp.append(" ".join(['[START]',pt.numpy().decode('utf-8'),'[END]']))
         targ.append(" ".join(['[START]',en.numpy().decode('utf-8')]))
         targ_ids_label.append(" ".join([en.numpy().decode('utf-8'), '[END]']))
-    return inp, targ,targ_ids_label
+    return inp[:50], targ[:50],targ_ids_label[:50]
 
 
 

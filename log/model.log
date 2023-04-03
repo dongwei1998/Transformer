@@ -31,3 +31,15 @@
 2023-03-30 15:51:50|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
 2023-03-30 16:02:51|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
 2023-03-30 16:02:51|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
+2023-03-30 16:35:38|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
+2023-03-30 16:35:38|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
+2023-03-30 16:37:21|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
+2023-03-30 16:37:21|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
+2023-03-30 16:39:27|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
+2023-03-30 16:39:27|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
+2023-03-30 16:40:00|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
+2023-03-30 16:40:00|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
+2023-03-30 16:43:10|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
+2023-03-30 16:43:10|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
+2023-03-30 16:43:32|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
+2023-03-30 16:43:32|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
