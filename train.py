@@ -128,6 +128,7 @@ def train_model(args):
     inp, targ,targ_label = data_help.load_data()
 
     # 数据预处理 序列化工具加载
+    args.logger.info('序列化工具加载！')
     if os.path.exists(args.input_vocab) and os.path.exists(args.target_vocab):
         token_tool_a = Tokenizers(input_vocab=args.input_vocab,max_length=args.max_seq_length,standardize=standardize)
         token_tool_b = Tokenizers(input_vocab=args.target_vocab, max_length=args.max_seq_length, standardize=standardize)
@@ -136,6 +137,7 @@ def train_model(args):
         token_tool_b = Tokenizers(input_vocab=args.target_vocab, data=targ, max_length=args.max_seq_length,standardize=standardize)
 
     # 获取词表大小
+    args.logger.info('词表大小获取！')
     args.input_vocab_size = token_tool_a.tokenizers.vocabulary_size()
     args.target_vocab_size = token_tool_b.tokenizers.vocabulary_size()
 
@@ -145,12 +147,25 @@ def train_model(args):
 
 
     dataset = tf.data.Dataset.from_tensor_slices((inp_ids, targ_ids,targ_label_ids))
-    dataset.shuffle(buffer_size=10000)
+    dataset.shuffle(buffer_size=32)
     dataset = dataset.batch(args.batch_size).map(prepare_batch, tf.data.AUTOTUNE).prefetch(buffer_size=tf.data.AUTOTUNE)
 
 
+    # # 数据可视化
+    # args.logger.info('数据可视化!')
+    # for (inp_ids, targ_ids),targ_label_ids in dataset:
+    #     args.logger.info("原始读取的 文本 数据...")
+    #     args.logger.info(str(inp[:args.batch_size]))
+    #     args.logger.info(str(targ[:args.batch_size]))
+    #     args.logger.info(str(targ_label[:args.batch_size]))
+    #     args.logger.info("数据预处理后的 idx 数据...")
+    #     args.logger.info(inp_ids)
+    #     args.logger.info(targ_ids)
+    #     args.logger.info(targ_label_ids)
+    #     break
+
     # 数据可视化
-    for (inp_ids, targ_ids),targ_label_ids in dataset:
+    for (inp_ids, targ_ids), targ_label_ids in dataset:
         print("原始读取的 文本 数据...")
         print(inp[:args.batch_size])
         print(targ[:args.batch_size])
@@ -159,16 +174,14 @@ def train_model(args):
         print(inp_ids)
         print(targ_ids)
         print(targ_label_ids)
-        print("数据预处理后的 文本 数据...")
-        print(token_tool_a.ids_to_text(inp_ids))
-        print(token_tool_b.ids_to_text(targ_ids))
-        print(token_tool_b.ids_to_text(targ_label_ids))
         break
 
 
 
     # 模型构建
+    args.logger.info("开始模型构建...")
     transformer = Transformer(
+        logger = args.logger,
         num_layers=args.num_layers,
         d_model=args.embedding_size,
         num_heads=args.num_heads,
@@ -178,26 +191,27 @@ def train_model(args):
         dropout_rate=args.dropout_rate)
 
 
-
     # 模型优化器
     learing_rate = CustomSchedule(args.embedding_size)
     optimizer = tf.keras.optimizers.Adam(learing_rate, beta_1=0.9,beta_2=0.98, epsilon=1e-9)
 
-    # 模型优化
+    # 模型编译
+    args.logger.info("开始模型编译...")
     transformer.compile(
         loss=masked_loss,
         optimizer=optimizer,
         metrics=[masked_accuracy])
 
-    # 模型保存器
+    # 模型保存器 # ckpt管理器
+    args.logger.info(f"模型保存器构建，最大保存 {3} 个模型于 {args.checkpoint_path_tr} 下")
     ckpt = tf.train.Checkpoint(transformer=transformer,
                                optimizer=optimizer)
-    # ckpt管理器
-    ckpt_manager = tf.train.CheckpointManager(ckpt, args.checkpoint_path, max_to_keep=3)
+    ckpt_manager = tf.train.CheckpointManager(ckpt, args.checkpoint_path_tr, max_to_keep=3)
 
     if ckpt_manager.latest_checkpoint:
         ckpt.restore(ckpt_manager.latest_checkpoint)
-        print(f'加载恢复权重文件 {ckpt_manager.latest_checkpoint}')
+        args.logger.info(f"恢复模型 {ckpt_manager.latest_checkpoint} ")
+
 
 
     step = 0
@@ -218,21 +232,20 @@ def train_model(args):
             step_list.append(step)
             loss_list.append(loss)
             if step % args.step_env_model == 0:
-                print('epoch {}, batch {}, loss:{:.4f}, acc:{:.4f}'.format(
-                    epoch + 1, batch, loss, acc
-                ))
+                args.logger.info('epoch {}, batch {}, loss:{:.4f}, acc:{:.4f}'.format(
+                    epoch + 1, batch, loss, acc))
+
             if (step + 1) % args.ckpt_model_num == 0:
                 ckpt_save_path = ckpt_manager.save()
-                print('epoch {}, save model at {}'.format(
-                    epoch + 1, ckpt_save_path
-                ))
+                args.logger.info('epoch {}, save model at {}'.format(
+                    epoch + 1, ckpt_save_path))
             step+=1
+        args.logger.info('epoch {}, loss:{:.4f}, acc:{:.4f}'.format(
+            epoch + 1, loss, acc))
 
-        print('epoch {}, loss:{:.4f}, acc:{:.4f}'.format(
-            epoch + 1, loss, acc
-        ))
-        print('time in 1 epoch:{} secs\n'.format(time.time() - start_s))
-        transformer.summary()
+        args.logger.info('time in 1 epoch:{} secs\n'.format(time.time() - start_s))
+
+
         # 最终保存
         ckpt_manager.save()
 
@@ -241,27 +254,37 @@ def train_model(args):
 
     # # 推理
     # print(transformer.decoder.last_attn_scores)
+    args.logger.info(f"推理模型构建...")
     translator = Translator((token_tool_a, token_tool_b), transformer, args.max_seq_length)
-    # 模型保存
     translator = ExportTranslator(translator)
-    _input = tf.transpose('este é o primeiro livro que eu fiz.', conjugate=True)
+
+    # 模型预测
+
+    sent = 'este é o primeiro livro que eu fiz.'
+    args.logger.info(f"input {sent} ")
+    _input = tf.transpose(sent, conjugate=True)
     result = translator(_input)
-    print(result)
+    pr_text = ' '.join([token_tool_b.ids_to_text_dict[idx] for idx in result.numpy().tolist()[0]])
+    args.logger.info(f"output {pr_text} ")
 
-    tf.saved_model.save(translator, './model_2')
-    # tf.keras.models.save_model(translator, filepath='./model_1')
-    # tf.keras.models.save_model(translator, filepath='./model_2')
-    # reloaded = tf.keras.models.load_model('./model_2')
+    args.logger.info(f"推理模型保存，保存于 {args.checkpoint_path_pr} 下")
+    tf.saved_model.save(translator, args.checkpoint_path_pr)
 
-    reloaded = tf.saved_model.load('./model_2')
-    result = reloaded('este é o primeiro livro que eu fiz.')
-    print(result)
 
+    args.logger.info(f"推理模型加载，加载于 {args.checkpoint_path_pr} 下")
+    reloaded = tf.saved_model.load(args.checkpoint_path_pr)
+    sent = 'este é o primeiro livro que eu fiz.'
+    args.logger.info(f"input {sent} ")
+    result = reloaded(sent)
+    pr_text = ' '.join([token_tool_b.ids_to_text_dict[idx] for idx in result.numpy().tolist()[0]])
+    args.logger.info(f"output {pr_text} ")
+
+    transformer.summary()
     # 打印loss
     plt.plot(step_list, loss_list)
     plt.xlabel('train step')
     plt.ylabel('loss')
-    plt.savefig(f'./train_loss.jpg')
+    plt.savefig(f'train_loss.jpg')
 
 if __name__ == '__main__':
     os.environ["CUDA_VISIBLE_DEVICES"] = '1'  # 指定第一块GPU可用

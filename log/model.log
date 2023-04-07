@@ -1,45 +1,407 @@
-2023-03-30 09:57:26|INFO|gpu_git.py[:152]|Choosing the GPU device has largest free memory...
-2023-03-30 09:57:26|INFO|gpu_git.py[:109]|Sorted by free memory size
-2023-03-30 09:57:26|INFO|gpu_git.py[:165]|Using GPU 0:index:0 | gpu_name:NVIDIA GeForce RTX 3070 Laptop GPU | memory.free:7849 | memory.total:8192 | power.draw:14 | power.limit:1 | specified:True
-2023-03-30 13:55:47|INFO|gpu_git.py[:152]|Choosing the GPU device has largest free memory...
-2023-03-30 13:55:47|INFO|gpu_git.py[:109]|Sorted by free memory size
-2023-03-30 13:55:47|INFO|gpu_git.py[:165]|Using GPU 0:index:0 | gpu_name:NVIDIA GeForce RTX 3070 Laptop GPU | memory.free:7726 | memory.total:8192 | power.draw:16 | power.limit:1 | specified:True
-2023-03-30 14:07:53|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 14:09:05|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 14:10:48|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 14:12:09|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:16:01|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:18:26|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:21:26|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:31:25|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:33:37|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:34:55|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:35:41|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:36:44|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:39:57|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:41:17|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:42:16|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:42:54|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:44:51|INFO|gpu_git.py[:152]|Choosing the GPU device has largest free memory...
-2023-03-30 15:44:51|INFO|gpu_git.py[:109]|Sorted by free memory size
-2023-03-30 15:44:51|INFO|gpu_git.py[:165]|Using GPU 0:index:0 | gpu_name:NVIDIA GeForce RTX 3070 Laptop GPU | memory.free:7623 | memory.total:8192 | power.draw:18 | power.limit:1 | specified:True
-2023-03-30 15:45:24|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:45:55|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:48:35|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:48:54|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:49:17|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 15:51:50|INFO|gpu_git.py[:149]|Using CPU 0:/cpu:0
-2023-03-30 16:02:51|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
-2023-03-30 16:02:51|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
-2023-03-30 16:35:38|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
-2023-03-30 16:35:38|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
-2023-03-30 16:37:21|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
-2023-03-30 16:37:21|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
-2023-03-30 16:39:27|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
-2023-03-30 16:39:27|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
-2023-03-30 16:40:00|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
-2023-03-30 16:40:00|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
-2023-03-30 16:43:10|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
-2023-03-30 16:43:10|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
-2023-03-30 16:43:32|INFO|gpu_git.py[:19]|This script could only be used to manage NVIDIA GPUs,but no GPU found in your device
-2023-03-30 16:43:32|INFO|gpu_git.py[:20]|Using CPU 0:/cpu:0
+2023-04-07 15:26:45|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 15:26:45|INFO|train.py[:140]|词表大小获取！
+2023-04-07 15:26:45|INFO|train.py[:155]|数据可视化!
+2023-04-07 15:26:45|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 15:26:45|INFO|train.py[:160]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 15:26:45|INFO|train.py[:161]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 15:26:45|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:26:45|INFO|train.py[:163]|数据预处理后的 idx 数据...
+2023-04-07 15:26:45|INFO|train.py[:164]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:26:45|INFO|train.py[:165]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:26:45|INFO|train.py[:166]|数据预处理后的 文本 数据...
+2023-04-07 15:26:45|INFO|train.py[:167]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:26:45|INFO|train.py[:168]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:26:45|INFO|train.py[:169]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:26:45|INFO|train.py[:175]|开始模型构建...
+2023-04-07 15:26:45|INFO|train.py[:192]|开始模型编译...
+2023-04-07 15:26:45|INFO|train.py[:199]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 15:29:37|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 15:29:37|INFO|train.py[:140]|词表大小获取！
+2023-04-07 15:29:37|INFO|train.py[:155]|数据可视化!
+2023-04-07 15:29:37|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 15:29:37|INFO|train.py[:160]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 15:29:37|INFO|train.py[:161]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 15:29:37|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:29:37|INFO|train.py[:163]|数据预处理后的 idx 数据...
+2023-04-07 15:29:37|INFO|train.py[:164]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:29:37|INFO|train.py[:165]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:29:37|INFO|train.py[:166]|数据预处理后的 文本 数据...
+2023-04-07 15:29:37|INFO|train.py[:167]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:29:37|INFO|train.py[:168]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:29:37|INFO|train.py[:169]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:29:37|INFO|train.py[:175]|开始模型构建...
+2023-04-07 15:29:37|INFO|train.py[:192]|开始模型编译...
+2023-04-07 15:29:37|INFO|train.py[:199]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 15:30:29|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 15:30:29|INFO|train.py[:140]|词表大小获取！
+2023-04-07 15:30:30|INFO|train.py[:155]|数据可视化!
+2023-04-07 15:30:30|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 15:30:30|INFO|train.py[:160]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 15:30:30|INFO|train.py[:161]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 15:30:30|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:30:30|INFO|train.py[:163]|数据预处理后的 idx 数据...
+2023-04-07 15:30:30|INFO|train.py[:164]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:30:30|INFO|train.py[:165]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:30:30|INFO|train.py[:166]|数据预处理后的 文本 数据...
+2023-04-07 15:30:30|INFO|train.py[:167]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:30:30|INFO|train.py[:168]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:30:30|INFO|train.py[:169]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:30:30|INFO|train.py[:175]|开始模型构建...
+2023-04-07 15:30:30|INFO|train.py[:192]|开始模型编译...
+2023-04-07 15:30:30|INFO|train.py[:199]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 15:31:14|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 15:31:14|INFO|train.py[:140]|词表大小获取！
+2023-04-07 15:31:15|INFO|train.py[:155]|数据可视化!
+2023-04-07 15:31:15|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 15:31:15|INFO|train.py[:160]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 15:31:15|INFO|train.py[:161]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 15:31:15|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:15|INFO|train.py[:163]|数据预处理后的 idx 数据...
+2023-04-07 15:31:15|INFO|train.py[:164]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:15|INFO|train.py[:165]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:15|INFO|train.py[:166]|数据预处理后的 文本 数据...
+2023-04-07 15:31:15|INFO|train.py[:167]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:15|INFO|train.py[:168]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:15|INFO|train.py[:169]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:15|INFO|train.py[:175]|开始模型构建...
+2023-04-07 15:31:15|INFO|train.py[:192]|开始模型编译...
+2023-04-07 15:31:15|INFO|train.py[:199]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 15:31:52|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 15:31:52|INFO|train.py[:140]|词表大小获取！
+2023-04-07 15:31:52|INFO|train.py[:155]|数据可视化!
+2023-04-07 15:31:52|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 15:31:52|INFO|train.py[:160]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 15:31:52|INFO|train.py[:161]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 15:31:52|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:52|INFO|train.py[:163]|数据预处理后的 idx 数据...
+2023-04-07 15:31:52|INFO|train.py[:164]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:52|INFO|train.py[:165]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:52|INFO|train.py[:166]|数据预处理后的 文本 数据...
+2023-04-07 15:31:52|INFO|train.py[:167]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:52|INFO|train.py[:168]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:52|INFO|train.py[:169]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:31:52|INFO|train.py[:175]|开始模型构建...
+2023-04-07 15:31:52|INFO|train.py[:192]|开始模型编译...
+2023-04-07 15:31:52|INFO|train.py[:199]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 15:31:52|INFO|train.py[:228]|epoch 1, batch 0, loss:6.6397, acc:0.0000
+2023-04-07 15:31:58|INFO|train.py[:236]|epoch 1, loss:6.6448, acc:0.0000
+2023-04-07 15:31:58|INFO|train.py[:239]|time in 1 epoch:6.100002288818359 secs
+
+2023-04-07 15:31:59|INFO|train.py[:250]|推理模型构建...
+2023-04-07 15:31:59|INFO|train.py[:257]|input este é o primeiro livro que eu fiz. 
+2023-04-07 15:32:01|INFO|train.py[:260]|output [[590  92  92  92 230 235 193 151 605 376  57 612 376 456 600 635 376 255
+  503 437 580 233 262 195 523 295 430 395 591 100]] 
+2023-04-07 15:57:26|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 15:57:26|INFO|train.py[:140]|词表大小获取！
+2023-04-07 15:57:27|INFO|train.py[:155]|数据可视化!
+2023-04-07 15:57:27|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 15:57:27|INFO|train.py[:160]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 15:57:27|INFO|train.py[:161]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 15:57:27|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:57:27|INFO|train.py[:163]|数据预处理后的 idx 数据...
+2023-04-07 15:57:27|INFO|train.py[:164]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:57:27|INFO|train.py[:165]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:57:27|INFO|train.py[:166]|数据预处理后的 文本 数据...
+2023-04-07 15:57:27|INFO|train.py[:167]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:57:27|INFO|train.py[:168]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:57:27|INFO|train.py[:169]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 15:57:27|INFO|train.py[:175]|开始模型构建...
+2023-04-07 15:57:27|INFO|train.py[:192]|开始模型编译...
+2023-04-07 15:57:27|INFO|train.py[:199]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 15:57:27|INFO|train.py[:206]|恢复模型 ./ckpt_model\translator_tr\ckpt-1 
+2023-04-07 15:57:28|INFO|train.py[:228]|epoch 1, batch 0, loss:6.7671, acc:0.0000
+2023-04-07 15:57:37|INFO|train.py[:236]|epoch 1, loss:6.2561, acc:0.0000
+2023-04-07 15:57:37|INFO|train.py[:239]|time in 1 epoch:10.089102983474731 secs
+
+2023-04-07 15:57:37|INFO|train.py[:250]|推理模型构建...
+2023-04-07 15:57:37|INFO|train.py[:257]|input este é o primeiro livro que eu fiz. 
+2023-04-07 15:57:41|INFO|train.py[:260]|output [[230 597 584 598 338 215  33 230  39 437 568 503 141  92 503 126 313 255
+  417  14  29  27   4 641  99 487 471 437 638  92]] 
+2023-04-07 16:00:30|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 16:00:30|INFO|train.py[:140]|词表大小获取！
+2023-04-07 16:00:30|INFO|train.py[:155]|数据可视化!
+2023-04-07 16:00:30|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 16:00:30|INFO|train.py[:160]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 16:00:30|INFO|train.py[:161]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 16:00:30|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:00:30|INFO|train.py[:163]|数据预处理后的 idx 数据...
+2023-04-07 16:00:30|INFO|train.py[:164]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:00:30|INFO|train.py[:165]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:00:30|INFO|train.py[:166]|数据预处理后的 文本 数据...
+2023-04-07 16:00:30|INFO|train.py[:167]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:00:30|INFO|train.py[:168]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:00:30|INFO|train.py[:169]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:00:30|INFO|train.py[:175]|开始模型构建...
+2023-04-07 16:00:30|INFO|train.py[:192]|开始模型编译...
+2023-04-07 16:00:30|INFO|train.py[:199]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 16:00:30|INFO|train.py[:206]|恢复模型 ./ckpt_model\translator_tr\ckpt-2 
+2023-04-07 16:00:31|INFO|train.py[:228]|epoch 1, batch 0, loss:6.4176, acc:0.0000
+2023-04-07 16:00:37|INFO|train.py[:236]|epoch 1, loss:5.7995, acc:0.1429
+2023-04-07 16:00:37|INFO|train.py[:239]|time in 1 epoch:6.243278980255127 secs
+
+2023-04-07 16:00:37|INFO|train.py[:250]|推理模型构建...
+2023-04-07 16:00:37|INFO|train.py[:257]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:00:39|INFO|train.py[:261]|output . [END] 
+2023-04-07 16:00:39|INFO|train.py[:263]|推理模型保存，保存于 ./ckpt_model\translator_pr 下
+2023-04-07 16:00:47|INFO|train.py[:269]|推理模型加载，加载于 ./ckpt_model\translator_pr 下
+2023-04-07 16:00:50|INFO|train.py[:272]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:00:51|INFO|train.py[:275]|output [END] 
+2023-04-07 16:02:09|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 16:02:09|INFO|train.py[:140]|词表大小获取！
+2023-04-07 16:02:09|INFO|train.py[:155]|数据可视化!
+2023-04-07 16:02:09|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 16:02:09|INFO|train.py[:160]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 16:02:09|INFO|train.py[:161]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 16:02:09|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:02:09|INFO|train.py[:163]|数据预处理后的 idx 数据...
+2023-04-07 16:02:09|INFO|train.py[:164]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:02:09|INFO|train.py[:165]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:02:09|INFO|train.py[:166]|数据预处理后的 文本 数据...
+2023-04-07 16:02:09|INFO|train.py[:167]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:02:09|INFO|train.py[:168]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:02:09|INFO|train.py[:169]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:02:09|INFO|train.py[:175]|开始模型构建...
+2023-04-07 16:02:09|INFO|train.py[:192]|开始模型编译...
+2023-04-07 16:02:09|INFO|train.py[:199]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 16:02:09|INFO|train.py[:206]|恢复模型 ./ckpt_model\translator_tr\ckpt-3 
+2023-04-07 16:02:10|INFO|train.py[:228]|epoch 1, batch 0, loss:6.0696, acc:0.0000
+2023-04-07 16:02:16|INFO|train.py[:236]|epoch 1, loss:5.3296, acc:0.1429
+2023-04-07 16:02:16|INFO|train.py[:239]|time in 1 epoch:6.218892335891724 secs
+
+2023-04-07 16:02:16|INFO|train.py[:250]|推理模型构建...
+2023-04-07 16:02:16|INFO|train.py[:257]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:02:18|INFO|train.py[:261]|output . . [END] 
+2023-04-07 16:02:18|INFO|train.py[:263]|推理模型保存，保存于 ./ckpt_model\translator_pr 下
+2023-04-07 16:02:26|INFO|train.py[:269]|推理模型加载，加载于 ./ckpt_model\translator_pr 下
+2023-04-07 16:02:29|INFO|train.py[:272]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:02:30|INFO|train.py[:275]|output . [END] 
+2023-04-07 16:03:26|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 16:03:26|INFO|train.py[:140]|词表大小获取！
+2023-04-07 16:03:26|INFO|train.py[:155]|数据可视化!
+2023-04-07 16:03:26|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 16:03:26|INFO|train.py[:160]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 16:03:26|INFO|train.py[:161]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 16:03:26|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:03:26|INFO|train.py[:163]|数据预处理后的 idx 数据...
+2023-04-07 16:03:26|INFO|train.py[:164]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:03:26|INFO|train.py[:165]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:03:26|INFO|train.py[:166]|数据预处理后的 文本 数据...
+2023-04-07 16:03:26|INFO|train.py[:167]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:03:26|INFO|train.py[:168]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:03:26|INFO|train.py[:169]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:03:26|INFO|train.py[:175]|开始模型构建...
+2023-04-07 16:03:26|INFO|train.py[:192]|开始模型编译...
+2023-04-07 16:03:26|INFO|train.py[:199]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 16:03:26|INFO|train.py[:206]|恢复模型 ./ckpt_model\translator_tr\ckpt-4 
+2023-04-07 16:03:27|INFO|train.py[:228]|epoch 1, batch 0, loss:5.6379, acc:0.0952
+2023-04-07 16:03:33|INFO|train.py[:236]|epoch 1, loss:5.1400, acc:0.1429
+2023-04-07 16:03:33|INFO|train.py[:239]|time in 1 epoch:6.242120027542114 secs
+
+2023-04-07 16:03:33|INFO|train.py[:250]|推理模型构建...
+2023-04-07 16:03:33|INFO|train.py[:257]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:03:34|INFO|train.py[:261]|output . . [END] 
+2023-04-07 16:03:34|INFO|train.py[:263]|推理模型保存，保存于 ./ckpt_model\translator_pr 下
+2023-04-07 16:03:43|INFO|train.py[:269]|推理模型加载，加载于 ./ckpt_model\translator_pr 下
+2023-04-07 16:03:46|INFO|train.py[:272]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:03:46|INFO|train.py[:275]|output [END] 
+2023-04-07 16:05:33|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 16:05:33|INFO|train.py[:140]|词表大小获取！
+2023-04-07 16:05:33|INFO|train.py[:155]|数据可视化!
+2023-04-07 16:05:33|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 16:06:23|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 16:06:23|INFO|train.py[:140]|词表大小获取！
+2023-04-07 16:06:23|INFO|train.py[:155]|数据可视化!
+2023-04-07 16:06:23|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 16:06:23|INFO|train.py[:160]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 16:06:23|INFO|train.py[:161]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 16:06:23|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:06:23|INFO|train.py[:163]|数据预处理后的 idx 数据...
+2023-04-07 16:06:23|INFO|train.py[:164]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:06:23|INFO|train.py[:165]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:06:23|INFO|train.py[:166]|数据预处理后的 文本 数据...
+2023-04-07 16:06:23|INFO|train.py[:167]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:06:23|INFO|train.py[:168]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:06:23|INFO|train.py[:169]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:06:23|INFO|train.py[:175]|开始模型构建...
+2023-04-07 16:06:23|INFO|train.py[:192]|开始模型编译...
+2023-04-07 16:06:23|INFO|train.py[:199]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 16:06:23|INFO|train.py[:206]|恢复模型 ./ckpt_model\translator_tr\ckpt-5 
+2023-04-07 16:06:24|INFO|train.py[:228]|epoch 1, batch 0, loss:5.5139, acc:0.0476
+2023-04-07 16:06:30|INFO|train.py[:236]|epoch 1, loss:5.0367, acc:0.1429
+2023-04-07 16:06:30|INFO|train.py[:239]|time in 1 epoch:6.517506837844849 secs
+
+2023-04-07 16:06:30|INFO|train.py[:250]|推理模型构建...
+2023-04-07 16:06:30|INFO|train.py[:257]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:06:32|INFO|train.py[:261]|output . [END] 
+2023-04-07 16:06:32|INFO|train.py[:263]|推理模型保存，保存于 ./ckpt_model\translator_pr 下
+2023-04-07 16:06:41|INFO|train.py[:269]|推理模型加载，加载于 ./ckpt_model\translator_pr 下
+2023-04-07 16:06:44|INFO|train.py[:272]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:06:44|INFO|train.py[:275]|output [END] 
+2023-04-07 16:07:47|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 16:07:47|INFO|train.py[:140]|词表大小获取！
+2023-04-07 16:07:47|INFO|train.py[:155]|数据可视化!
+2023-04-07 16:07:47|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 16:07:47|INFO|train.py[:159]|['[START] and when you improve searchability , you actually take away the one advantage of print , which is serendipity .']
+2023-04-07 16:07:47|INFO|train.py[:160]|['and when you improve searchability , you actually take away the one advantage of print , which is serendipity . [END]']
+2023-04-07 16:07:47|INFO|train.py[:161]|数据预处理后的 idx 数据...
+2023-04-07 16:07:47|INFO|train.py[:162]|tf.Tensor(
+[[  3  11  61 430   8 327   2 234   8 179 205  33 477   2   6  12   8 276
+    5   4   0   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:07:47|INFO|train.py[:163]|tf.Tensor(
+[[  3   6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116
+   14 289   4   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:07:47|INFO|train.py[:164]|tf.Tensor(
+[[  6  62  16 456 300   2  16  80  90 609   5  44 634   8 331   2 116  14
+  289   4 645   0   0   0   0   0   0   0   0   0]], shape=(1, 30), dtype=int64)
+2023-04-07 16:07:47|INFO|train.py[:170]|开始模型构建...
+2023-04-07 16:07:47|INFO|train.py[:187]|开始模型编译...
+2023-04-07 16:07:47|INFO|train.py[:194]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 16:07:47|INFO|train.py[:201]|恢复模型 ./ckpt_model\translator_tr\ckpt-6 
+2023-04-07 16:07:48|INFO|train.py[:223]|epoch 1, batch 0, loss:5.3483, acc:0.0476
+2023-04-07 16:07:53|INFO|train.py[:231]|epoch 1, loss:4.8757, acc:0.1429
+2023-04-07 16:07:53|INFO|train.py[:234]|time in 1 epoch:6.302873373031616 secs
+
+2023-04-07 16:07:53|INFO|train.py[:245]|推理模型构建...
+2023-04-07 16:07:53|INFO|train.py[:252]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:07:55|INFO|train.py[:256]|output . [END] 
+2023-04-07 16:07:55|INFO|train.py[:258]|推理模型保存，保存于 ./ckpt_model\translator_pr 下
+2023-04-07 16:08:04|INFO|train.py[:264]|推理模型加载，加载于 ./ckpt_model\translator_pr 下
+2023-04-07 16:08:07|INFO|train.py[:267]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:08:07|INFO|train.py[:270]|output [END] 
+2023-04-07 16:08:26|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 16:08:26|INFO|train.py[:140]|词表大小获取！
+2023-04-07 16:08:26|INFO|train.py[:155]|数据可视化!
+2023-04-07 16:08:26|INFO|train.py[:157]|原始读取的 文本 数据...
+2023-04-07 16:14:05|INFO|train.py[:131]|序列化工具加载！
+2023-04-07 16:14:05|INFO|train.py[:140]|词表大小获取！
+2023-04-07 16:14:05|INFO|train.py[:182]|开始模型构建...
+2023-04-07 16:14:05|INFO|train.py[:199]|开始模型编译...
+2023-04-07 16:14:05|INFO|train.py[:206]|模型保存器构建，最大保存 3 个模型于 ./ckpt_model\translator_tr 下
+2023-04-07 16:14:05|INFO|train.py[:213]|恢复模型 ./ckpt_model\translator_tr\ckpt-7 
+2023-04-07 16:14:06|INFO|train.py[:235]|epoch 1, batch 0, loss:5.2388, acc:0.0000
+2023-04-07 16:14:15|INFO|train.py[:243]|epoch 1, loss:4.8160, acc:0.0000
+2023-04-07 16:14:15|INFO|train.py[:246]|time in 1 epoch:9.999916076660156 secs
+
+2023-04-07 16:14:16|INFO|train.py[:257]|推理模型构建...
+2023-04-07 16:14:16|INFO|train.py[:264]|input este é o primeiro livro que eu fiz. 
+2023-04-07 16:14:19|INFO|train.py[:268]|output [END] 

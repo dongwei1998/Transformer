@@ -259,10 +259,10 @@ class EncoderLayer(tf.keras.layers.Layer):
 
 # 编码器
 class Encoder(tf.keras.layers.Layer):
-    def __init__(self, *, num_layers, d_model, num_heads,
+    def __init__(self, *, logger,num_layers, d_model, num_heads,
                  dff, vocab_size, dropout_rate=0.1,training):
         super().__init__()
-
+        self.logger =logger
         self.d_model = d_model
         self.num_layers = num_layers
         self.num_heads = num_heads
@@ -299,6 +299,7 @@ class Encoder(tf.keras.layers.Layer):
 
     def get_config(self):
         config = {
+            "logger":self.logger,
             "d_model": self.d_model,
             "num_layers": self.num_layers,
             "num_heads": self.num_heads,
@@ -373,9 +374,10 @@ class DecoderLayer(tf.keras.layers.Layer):
 
 # 解码器
 class Decoder(tf.keras.layers.Layer):
-    def __init__(self, *, num_layers, d_model, num_heads, dff, vocab_size,
+    def __init__(self, *,logger, num_layers, d_model, num_heads, dff, vocab_size,
                  dropout_rate=0.1,training):
         super(Decoder, self).__init__()
+        self.logger =logger
         self.d_model = d_model
         self.num_layers = num_layers
         self.num_heads = num_heads
@@ -421,6 +423,7 @@ class Decoder(tf.keras.layers.Layer):
     def get_config(self):
         config = super(Decoder, self).get_config()
         config.update({
+            "logger":self.logger,
             "d_model": self.d_model,
             "num_layers": self.num_layers,
             "num_heads": self.num_heads,
@@ -438,10 +441,10 @@ class Decoder(tf.keras.layers.Layer):
 
 # Transformer模型
 class Transformer(tf.keras.Model):
-    def __init__(self, *, num_layers, d_model, num_heads, dff,
+    def __init__(self, *, logger,num_layers, d_model, num_heads, dff,
                  input_vocab_size, target_vocab_size, dropout_rate=0.1,training=True):
         super().__init__()
-
+        self.logger = logger
         self.d_model = d_model
         self.num_layers = num_layers
         self.num_heads = num_heads
@@ -451,13 +454,14 @@ class Transformer(tf.keras.Model):
         self.dropout_rate = dropout_rate
         self.training = training
 
-        self.encoder = Encoder(num_layers=num_layers, d_model=d_model,
+        self.encoder = Encoder(logger=self.logger,num_layers=num_layers, d_model=d_model,
                                num_heads=num_heads, dff=dff,
                                vocab_size=input_vocab_size,
                                dropout_rate=dropout_rate,
-                               training=training)
+                               training=training,
+                               )
 
-        self.decoder = Decoder(num_layers=num_layers, d_model=d_model,
+        self.decoder = Decoder(logger=self.logger,num_layers=num_layers, d_model=d_model,
                                num_heads=num_heads, dff=dff,
                                vocab_size=target_vocab_size,
                                dropout_rate=dropout_rate,
@@ -480,6 +484,7 @@ class Transformer(tf.keras.Model):
 
     def get_config(self):
         config = {
+            "logger":self.logger,
             "d_model": self.d_model,
             "num_layers": self.num_layers,
             "num_heads": self.num_heads,
@@ -541,6 +546,7 @@ if __name__ == '__main__':
 
     # 模型构建
     transformer = Transformer(
+        logger='args.logger',
         num_layers=num_layers,
         d_model=d_model,
         num_heads=num_heads,
